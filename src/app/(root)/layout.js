@@ -1,16 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Manrope, Sacramento } from "next/font/google";
+import "./main.css";
 import Head from "next/head";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const manRope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+})
+
+const sacramento = Sacramento({
+  variable: "--font-sacramento",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -23,8 +27,8 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${manRope.variable} ${sacramento.variable}`}>
+        { children }
       </body>
     </html>
   );
