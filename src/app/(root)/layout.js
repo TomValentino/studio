@@ -1,5 +1,5 @@
 import { Manrope, Sacramento } from "next/font/google";
-import "./main.css";
+import "../../global/css/main.css";
 import Head from "next/head";
 
 

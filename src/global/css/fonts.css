@@ -1,0 +1,11 @@
+h1 {
+  font-size: 18.5px;        
+  line-height: 1.2;         /* CAN be modified */
+  letter-spacing: -0.04em;   /* CAN be modified */
+  font-weight: 600;  /* Semi */
+}
+  
+  p {
+    letter-spacing: 0px;
+  }
+  

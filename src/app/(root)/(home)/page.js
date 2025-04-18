@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Hero from "./_components/Hero";
+import TopBar from "@/global/components/TopBar";
 
 export default function Home() {
   return (
-    <div>
-      <Image src="/logo.svg" alt="Logo" width={100} height={100} />
-      <h1>Hello ??</h1>
-    </div>
+    <>
+      <TopBar />
+      <Hero />
+    </>
   );
 }
