@@ -1,4 +1,4 @@
-import { Manrope, Sacramento } from "next/font/google";
+import { Manrope, Outfit, Sacramento } from "next/font/google";
 import "../../global/css/main.css";
 import Head from "next/head";
 
@@ -8,12 +8,10 @@ const manRope = Manrope({
   subsets: ["latin"],
 })
 
-const sacramento = Sacramento({
-  variable: "--font-sacramento",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["400"],
-});
-
+})
 
 
 export const metadata = {
@@ -27,7 +25,7 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${manRope.variable} ${sacramento.variable}`}>
+      <body className={`${manRope.variable} ${outfit.variable}`}>
         { children }
       </body>
     </html>
