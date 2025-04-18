@@ -1,4 +1,4 @@
-import './smallcomponents.css';
+import '@/global/css/components/general.css'
 import React from 'react';
 import Image from 'next/image';
 

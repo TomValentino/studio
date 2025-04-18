@@ -1,5 +1,5 @@
 import React from 'react'
-import './topbar.css'
+import '@/global/css/components/topbar.css'
 import Image from 'next/image'
 
 const TopBar = () => {

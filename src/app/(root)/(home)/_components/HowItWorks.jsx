@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import styles from './howitworks.module.css'
-import { BenefitPill } from '@/global/components/SmallComponents'
+import styles from '@/global/css/modules/howitworks.module.css'
+import { BenefitPill } from '@/global/components/General'
 import Image from 'next/image'
 
 const HowItWorks = () => {

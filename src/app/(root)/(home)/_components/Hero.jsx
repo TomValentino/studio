@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import styles from './hero.module.css'
-import { BulletList } from '@/global/components/SmallComponents'
+import styles from '@/global/css/modules/hero.module.css'
+import { BulletList } from '@/global/components/General'
 
 const Hero = () => {
   // State to manage the checkbox's checked state

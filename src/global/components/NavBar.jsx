@@ -1,5 +1,5 @@
 import React from 'react'
-import './navbar.css'
+import '@/global/css/components/navbar.css'
 import Image from 'next/image'
 
 const navItems = [
