@@ -1,5 +1,5 @@
-@import './fonts.css';
-@import './buttons.css';
+@import './style/fonts.css';
+@import './style/buttons.css';
 
 :root {
   --background: #0D0D0D;
