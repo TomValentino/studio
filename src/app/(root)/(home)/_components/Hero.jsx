@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import styles from './hero.module.css'
+import { BulletList } from '@/global/components/SmallComponents'
 
 const Hero = () => {
   // State to manage the checkbox's checked state
@@ -20,8 +21,22 @@ const Hero = () => {
 
   return (
     <div className={`${styles.fontController} poop`}>
-      <div>
-        <p style={{marginBottom:'100em'}}>
+      <div id={styles.leftWrapper}>
+
+        <h1 id={styles.title}>Boost Conversions & AOV’s With A <span id={styles.titleGradient}>Dynamic Slider Cart</span></h1>
+
+        <div id={styles.divider}></div>
+
+        <div id={styles.topImgWrapper}>
+          <Image src="/package/top-img.png" alt="Hero" id={styles.topImg} width={1000} height={751} />
+        </div>
+
+        <div id={styles.extraImgWrapper}>
+          <Image src="/package/extra-img-1.png" alt="Hero" className={styles.extraImg} width={500} height={315} />
+          <Image src="/package/extra-img-2.png" alt="Hero" className={styles.extraImg} width={500} height={315} />
+        </div>
+
+        <p style={{marginTop: '3em'}}>
           Streamline your brand and empower faster go-to-market by leveraging this and this...
           Streamline your brand and empower faster go-to-market by leveraging this and this...
         </p>
@@ -105,24 +120,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-const BulletList = ({ bullets = [], wrapperClass = '', itemClass = '', iconClass = '', textClass = '' }) => {
-  return (
-    <div className={`${styles.bulletsWrapper} ${wrapperClass}`}>
-      {bullets.map((bullet, i) => (
-        <div key={i} className={`${styles.bulletItem} ${itemClass}`}>
-          <Image
-            src={bullet.icon || '/white-round-bullet.svg'}
-            alt={bullet.alt || 'Check'}
-            className={`${styles.bulletIcon} ${iconClass}`}
-            width={16}
-            height={16}
-          />
-          <h6 className={`${styles.bulletText} ${textClass}`}>
-            {bullet.text}
-          </h6>        
-        </div>
-      ))}
-    </div>
-  )
-}

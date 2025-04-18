@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./_components/Hero";
 import TopBar from "@/global/components/TopBar";
 import NavBar from "@/global/components/NavBar";
+import HowItWorks from "./_components/HowItWorks";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <TopBar />
       <NavBar />
       <Hero />
-      <p style={{ marginBottom: "100em" }}>Hello</p>
+      <HowItWorks />
+      <p style={{ marginBottom: "100em" }}></p>
     </>
   );
 }
