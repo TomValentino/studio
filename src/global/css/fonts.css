@@ -32,7 +32,7 @@ h6 { font-size: 1.48em }
 
 
   
-p, span, li {
+p, li {
   letter-spacing: 0px;
   color: var(--grey-text);
   font-size: 1.65em;

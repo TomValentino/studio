@@ -1,0 +1,94 @@
+.fontController {
+  /* font-size: 7.5px; */
+  padding: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+/* @media screen and (max-width: 671px) {
+  .fontController {
+    font-size: 9px;
+  }
+} */
+
+.stickyCard {
+  position: relative;
+  background-color: var(--callout-grey);
+  padding: 6em 3.3em 3.3em 3.3em;
+  border-radius: 1.5em;
+  width: 100%;
+  max-width: 36.7em;
+  min-width: 25em;
+}
+
+.cardIcon {
+  position: absolute;
+  top: -2.2em;
+  left: 3.5em;
+  width: 5.7em;
+  height: 5.7em;
+}
+
+/* Title wrapper (pricing etc) */
+
+.cardTitleWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  white-space: nowrap;
+  padding-right: 1em;
+}
+
+.cardTitleRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.9em;
+}
+
+.rrpPrice {
+  color: var(--grey-text);
+  text-decoration: line-through;
+  font-weight: 400;
+  font-size: 1.34em;
+}
+
+.price {
+  font-size: 1.76em;
+}
+
+.cardTextWrapper {
+  max-width: 20.8em;
+}
+.cardText{
+  margin: 1.5em 0 0 0;
+}
+
+/* Bullets */
+
+.bulletsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 3em;
+}
+
+.bulletItem {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75em;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bulletText {
+  font-size: 1.35em;
+}
