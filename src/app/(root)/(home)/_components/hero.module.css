@@ -1,11 +1,14 @@
 .fontController {
   /* font-size: 7.5px; */
-  padding: 10em 20em;
+  max-width: 1200px;
+  padding: 0 2em;
+  margin: auto;
+  margin-top: 8em;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row;
+  gap: 9em;
+  justify-content: stretch;
+  align-items: flex-start;
 }
 @media screen and (max-width: 745px) {
   .fontController {
@@ -26,6 +29,9 @@
   width: 100%;
   max-width: 36.7em;
   min-width: 25em;
+  margin-top: 2.2em;
+  position: sticky;
+  top: 3.6em;
 }
 
 .cardIcon {

@@ -20,6 +20,13 @@ const Hero = () => {
 
   return (
     <div className={`${styles.fontController} poop`}>
+      <div>
+        <p style={{marginBottom:'100em'}}>
+          Streamline your brand and empower faster go-to-market by leveraging this and this...
+          Streamline your brand and empower faster go-to-market by leveraging this and this...
+        </p>
+
+      </div>
 
       <div className={styles.stickyCard}>
 
@@ -92,10 +99,6 @@ const Hero = () => {
 
       </div>
 
-      <p style={{ maxWidth: '590px', marginTop: '3.5em'}}>
-        Streamline your brand and empower faster go-to-market by leveraging this and this...
-        Streamline your brand and empower faster go-to-market by leveraging this and this...
-      </p>
 
     </div>
   )

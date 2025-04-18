@@ -9,6 +9,7 @@ export default function Home() {
       <TopBar />
       <NavBar />
       <Hero />
+      <p style={{ marginBottom: "100em" }}>Hello</p>
     </>
   );
 }
