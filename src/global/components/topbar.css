@@ -7,3 +7,9 @@
     justify-content: center;
     background-color: var(--green);
 }
+
+
+#top-text {
+    color: var(--dark-text);
+    font-weight: 500;
+}

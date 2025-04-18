@@ -53,8 +53,8 @@ const Hero = () => {
               icon: '/white-round-bullet.svg',
               text: (
                 <>
-                  <span style={{ textDecoration: 'underline' }}>NO</span> apps used &{' '}
-                  <span style={{ textDecoration: 'underline' }}>NO</span> monthly fee’s
+                  <span className="underline">NO</span> apps used &{' '}
+                  <span className="underline">NO</span> monthly fee’s
                 </>
               ),
               alt: 'Star',
@@ -92,7 +92,7 @@ const Hero = () => {
 
       </div>
 
-      <p style={{ maxWidth: '590px' }}>
+      <p style={{ maxWidth: '590px', marginTop: '3.5em'}}>
         Streamline your brand and empower faster go-to-market by leveraging this and this...
         Streamline your brand and empower faster go-to-market by leveraging this and this...
       </p>
