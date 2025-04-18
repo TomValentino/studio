@@ -21,8 +21,10 @@ h1 {
   font-weight: 600;
 }
 
-h4, h5, h6 {
+h4 {
   font-size: 1.85em;        
+}
+h4, h5, h6 {
   letter-spacing: -0.04em;  
   font-weight: 600;  
   text-align: left;

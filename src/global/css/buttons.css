@@ -17,3 +17,13 @@ button.full {
 .big-btn {
     height: 5.2em;
 }
+
+.btn-divider {
+    height: 1.5em;
+    width: 1px;
+    background-color: var(--white);
+}
+
+button.bold {
+    font-weight: 700;
+}

@@ -7,11 +7,16 @@
   flex-direction: column;
   gap: 20px;
 }
-/* @media screen and (max-width: 671px) {
+@media screen and (max-width: 745px) {
   .fontController {
     font-size: 9px;
   }
-} */
+}
+@media screen and (max-width: 663px) {
+  .fontController {
+    font-size: 8px;
+  }
+}
 
 .stickyCard {
   position: relative;
@@ -78,7 +83,7 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
-  margin-top: 3em;
+  margin-top: 2.2em;
 }
 
 .bulletItem {
@@ -91,4 +96,67 @@
 
 .bulletText {
   font-size: 1.35em;
+}
+
+/* Upsell */
+
+.upsellWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  border-radius: 1em;
+  height: 3.8em;
+  background-color: var(--white);
+  position: relative;
+  margin-top: 3em;
+  padding: 1.2em;
+  cursor: pointer;
+}
+
+.upsellText {
+  color: var(--dark-text);
+  font-size: 1.2em;
+}
+
+.upsellPriceText {
+  font-weight: 400;
+}
+
+.upsellHelpWrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.2em;
+  border-radius: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grey);
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+}
+
+/* Button */
+
+.atcBtn {
+  margin-top: 1.2em;
+
+}
+
+.atcPrice {
+  color: var(--white-text-80);
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+.disclaimerText {
+  margin-top: 1.5em;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: var(--grey-text);
+  text-align: center;
 }
