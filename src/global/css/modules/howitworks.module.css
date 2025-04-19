@@ -7,9 +7,7 @@
     max-width: 1200px;
 }
 
-#title {
 
-}
 #contentWrapper {
     margin: 8.7em 0 0 0;
     display: flex;
@@ -108,9 +106,6 @@
     padding: 1em;
 }
 
-.icon {
-
-}
 .itemContent {
     display: flex;
     flex-direction: column;

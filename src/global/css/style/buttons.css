@@ -28,9 +28,9 @@ button:hover {
     background-color: var(--purple-hover);
 }
 
-button.green {
+/* button.green {
 
-}
+} */
 
 button.grey {
     background-color: var(--light-purple)
