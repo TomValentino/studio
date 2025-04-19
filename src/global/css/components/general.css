@@ -35,5 +35,6 @@
 
   .benefit-pill-text {
     font-size: 1.3em;
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: var(--space-3);
  }
