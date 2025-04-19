@@ -198,3 +198,57 @@
   color: var(--grey-text);
   text-align: center;
 }
+
+
+/* Other prodcuts */
+
+#otherProducts {
+  margin-top: 7em;
+  border-top: 1px solid var(--divider-grey);
+  width: 100%;
+}
+
+#otherProductsFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10em;
+  margin-top: 4em;
+}
+
+#otherProductsTitle {
+  font-size: 1.8em;
+  letter-spacing: var(--space-7);
+}
+
+#otherProductsMore {
+  color: var(--grey-text);
+  padding: 0.7em 1.4em;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-weight: var(--med);
+  letter-spacing: var(--space-5);
+  border-radius: 0.75em;
+  transition: all 0.3s ease;
+}
+
+#otherProductsMore:hover {
+  background-color: var(--callout-grey-50);
+}
+
+#otherProductsWrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  margin-top: 2.5em;
+}
+
+#otherProductsGrid {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2em;
+  width: max-content;
+}

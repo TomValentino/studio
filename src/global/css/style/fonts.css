@@ -10,6 +10,8 @@
   --space-3: -0.03em;
   --space-4: -0.04em;
   --space-5: -0.05em;
+  --space-6: -0.06em;
+  --space-7: -0.07em;
   /* Line heights */
   --line-1: 1.25;
   --line-2: 1.37;
@@ -83,7 +85,7 @@ button span {
 
 
 
-
+/* Global stylings */
 
 .center { text-align: center }
 

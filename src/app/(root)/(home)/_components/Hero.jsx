@@ -4,6 +4,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import styles from '@/global/css/modules/hero.module.css'
 import { BulletList } from '@/global/components/General'
+import ProductTile from '@/global/components/ProductTile'
 
 const Hero = () => {
   // State to manage the checkbox's checked state
@@ -18,6 +19,27 @@ const Hero = () => {
   const handleHelpClick = (e) => {
     e.stopPropagation(); // Stop click propagation for help section
   };
+
+  const products = [
+    {
+      img: '/product-tile/tile-1.png',
+      icon: '/product-tile/icon-1.svg',
+      title: 'Slider Cart',
+      price: 'From $69',
+    },
+    {
+      img: '/product-tile/tile-1.png',
+      icon: '/product-tile/icon-1.svg',
+      title: 'Predictive Search',
+      price: 'From $149',
+    },
+    {
+      img: '/product-tile/tile-1.png',
+      icon: '/product-tile/icon-1.svg',
+      title: 'Awesome Shit',
+      price: 'From $169',
+    },
+  ]
 
   return (
     <div className={`${styles.fontController} poop`}>
@@ -40,6 +62,27 @@ const Hero = () => {
           Streamline your brand and empower faster go-to-market by leveraging this and this...
           Streamline your brand and empower faster go-to-market by leveraging this and this...
         </p>
+
+        <div id={styles.otherProducts}>
+          <div id={styles.otherProductsFlex}>
+            <h6 id={styles.otherProductsTitle}>You might also like</h6>
+            <h6 id={styles.otherProductsMore}>View all</h6>
+          </div>
+          <div id={styles.otherProductsWrap} className="no-scrollbar">
+            <div id={styles.otherProductsGrid}>
+              {products.map((product, index) => (
+                <ProductTile
+                  key={index}
+                  img={product.img}
+                  title={product.title}
+                  price={product.price}
+                  icon={product.icon}
+                  tileMaxWidth={'24.3em'}
+                />
+              ))}
+          </div>
+          </div>
+        </div>
 
       </div>
 

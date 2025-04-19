@@ -9,7 +9,7 @@
 button {
     all: unset;
     box-sizing: border-box;
-    font-family: var(--font-manrope), Arial, Helvetica, sans-serif;;
+    font-family: var(--font-manrope);
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -27,7 +27,6 @@ button {
 button:hover {
     background-color: var(--purple-hover);
 }
-
 
 button.green {
 
