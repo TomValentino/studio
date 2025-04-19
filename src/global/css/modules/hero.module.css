@@ -1,6 +1,6 @@
 .fontController {
   /* font-size: 7.5px; */
-  max-width: 1200px;
+  max-width: 1110px;
   padding: 0 2em;
   margin: auto;
   margin-top: 6em;
@@ -67,17 +67,24 @@
   height: auto;
 }
 
-.stickyCard {
-  position: relative;
-  background-color: var(--callout-grey);
-  padding: 6em 3.3em 3.3em 3.3em;
-  border-radius: 1.5em;
+.stickyWrap {
   width: 100%;
   max-width: 36.7em;
   min-width: 25em;
   margin-top: 6.2em;
   position: sticky;
   top: 3.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.stickyCard {
+  background-color: var(--callout-grey);
+  padding: 6em 3.3em 3.3em 3.3em;
+  border-radius: 1.5em;
+  width: 100%;
+
 }
 
 .cardIcon {
@@ -200,6 +207,22 @@
 }
 
 
+/* Sticky card bottom */
+
+.stickyBtm {
+  display: flex;
+  flex-direction: row;
+  gap: 1.4em 1em;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  font-size: 8.5px;
+}
+
+
+
+
 /* Other prodcuts */
 
 #otherProducts {
@@ -251,4 +274,62 @@
   align-items: center;
   gap: 2em;
   width: max-content;
+}
+
+
+
+
+/* Left components */
+
+
+.leftTextWrap {
+  margin-top: 3.3em;
+
+}
+
+.leftText {
+}
+
+.leftTitleWrap {
+  padding-top: 4em;
+}
+.leftTitle {
+  font-size: 2em;
+  font-weight: var(--med);
+  letter-spacing: var(--space-5);
+}
+
+.leftImgWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.7em;
+  padding: 4.5em;
+  border-radius: 1.5em;
+  background-color: var(--callout-grey);
+}
+
+.leftImg {
+  width: 100%;
+}
+
+
+.benefitWrap {
+  width: 100%;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  border-radius: 1em;
+  margin-top: 3.3em;
+}
+
+.benefitText {
+  font-size: 1.6em;
+  font-weight: var(--med);
+  letter-spacing: var(--space-5);
 }
