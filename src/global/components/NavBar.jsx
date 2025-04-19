@@ -26,10 +26,12 @@ const NavBar = () => {
             </div>
             <div id="nav-right">
                 <h6 id="nav-right-text">Login</h6>
+
                 <button id="nav-button">
                     <Image src="/magic.svg" alt="Icon" width={18} height={18} />
                     <h6>Get started</h6>
                 </button>
+                
             </div>
         </div>
     </div>

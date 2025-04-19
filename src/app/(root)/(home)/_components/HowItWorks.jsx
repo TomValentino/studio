@@ -88,7 +88,7 @@ const StepItem = ({ imageSrc, altText, title, text }) => {
       </div>
       <div className={styles.itemContent}>
         <h4 className={styles.itemTitle}>{title}</h4>
-        <p className={`${styles.itemText} p-14`}>{text}</p>
+        <p className={`${styles.itemText} `}>{text}</p>
       </div>
     </div>
   );

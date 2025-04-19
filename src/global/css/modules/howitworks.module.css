@@ -120,10 +120,12 @@
 
 
 .itemTitle {
-
+    font-size: 1.8em;
 }
 
 .itemText {
-
+    font-size: 1.5em;
+    letter-spacing: var(--space-4);
+    font-weight: var(--reg);
 }
 

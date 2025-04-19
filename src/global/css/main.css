@@ -2,25 +2,32 @@
 @import './style/buttons.css';
 
 :root {
+
+  /* Default */
+  --white: #ffffff;
   --background: #0D0D0D;
   --black: #000000;
-  --white: #ffffff;
-  --white-text-80: rgba(255, 255, 255, 0.8);
-  --white-text-40: rgba(255, 255, 255, 0.4);
 
   /* Fonts */
   --white-text: #ffffff;
+  --white-text-80: rgba(255, 255, 255, 0.8);
+  --white-text-40: rgba(255, 255, 255, 0.4);
   --grey-text: #949494;
   --dark-text: #0D0D0D;
 
-  /* Greys */
+  /* Borders and lines */
   --callout-grey: #2B2B2B;
   --divider-grey: #2E2E2E;
-  --light-grey: #E7E7E7;
+
+  /* Greys */
+  --light-grey: #E7E7E7; /* used for ? on upsell.. */
+  --light-purple: #BAB2CD;
 
   /* Branding */
   --purple: #8D64FC;
+  --purple-hover: #7d53f0;
   --green: #D1FC64;
+  --gradient: linear-gradient(45deg, #8C64FC 0%, #FF7BF2 100%);
 }
 
 
@@ -78,6 +85,3 @@ input[type="checkbox"]:checked {
   background-position: center;
 }
 
-.underline {
-  text-decoration: underline;
-}

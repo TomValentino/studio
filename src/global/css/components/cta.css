@@ -1,0 +1,68 @@
+#cta-wrapper {
+    width: 100%;
+    max-width: 1135px;
+    margin: auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    border-radius: 2em;
+    padding: 10em;
+}
+
+#cta-title {
+    max-width: 444px;
+    letter-spacing: var(--space-5);
+    font-weight: var(--bold);
+}
+
+#cta-subtitle {
+    margin-top: 1em;
+    font-family: var(--outfit);
+    letter-spacing: var(--space-5);
+    font-size: 1.8em;
+    font-weight: var(--reg);
+    color: var(--grey-text);
+}
+
+#cta-button-wrapper {
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.cta-btn {
+    width: 100%;
+    max-width: 184px;
+    height: 4.5em;
+}
+
+.cta-btn-text {
+    font-size: 1.4em;
+    font-weight: var(--semi);
+
+}
+
+
+#cta-testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 3em;
+}
+
+#cta-tesimtonial-text {
+    letter-spacing: var(--space-5);
+    font-size: 1.6em;
+    font-weight: var(--med);
+    color: var(--grey-text);
+}

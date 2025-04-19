@@ -62,7 +62,7 @@ const Hero = () => {
         </div>
 
         <div className={styles.cardTextWrapper}>
-          <p className={`${styles.cardText} p-14`}>
+          <p className={`${styles.cardText}`}>
             Streamline your brand and empower faster go-to-market by leveraging this and this...
           </p>
         </div>
@@ -103,7 +103,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <button className={`${styles.atcBtn} big-btn full bold`}>
+        <button className={`${styles.atcBtn}`}>
           <Image src="/magic.svg" alt="Icon" width={18} height={18} />
           <h6>Add To Cart</h6>
           <div className={`btn-divider`}></div>

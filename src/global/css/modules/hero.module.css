@@ -101,6 +101,7 @@
 .cardTitle {
   white-space: nowrap;
   padding-right: 1em;
+  font-size: 1.85em;
 }
 
 .cardTitleRight {
@@ -127,6 +128,7 @@
 }
 .cardText{
   margin: 1.5em 0 0 0;
+  font-size: 1.4em;
 }
 
 
@@ -177,7 +179,10 @@
 
 .atcBtn {
   margin-top: 1.2em;
-
+  width: 100%;
+  height: 5.2em;
+  font-weight: 700;
+  border-radius: var(--button-radius-4);
 }
 
 .atcPrice {
