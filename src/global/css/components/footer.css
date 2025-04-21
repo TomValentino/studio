@@ -99,6 +99,41 @@
     letter-spacing: var(--space-3);
 }
 
+#footer-locations-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* padding-left: 5em; */
+}
+
+.footer-locations-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-locations-top {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-location-title {
+
+}
+
+.footer-location-text {
+    max-width: 140px;
+    font-size: 1.3em;
+}
+
+
 #footer-bottom {
     margin-top: 15em;
     display: flex;

@@ -18,20 +18,65 @@ const Footer = () => {
             </div>
             <Image src="/google-proof.svg" id="footer-proof" width={127} height={30} alt="" />
             </div>
-            <div id="footer-right">
-            <FooterItem
-                title="Power ups"
-                texts={['What\'s New', 'AI Sitebuilder', 'Webflow Library']}
-            />
-            <FooterItem
-                title="Company"
-                texts={['About Us', 'Blog', 'Contact']}
-            />
-            <FooterItem
-                title="Legal"
-                texts={['Terms of Service', 'Privacy Policy']}
-            />
-            </div>
+                <div id="footer-right">
+                <FooterItem
+                    title="Packages"
+                    texts={[
+                        'Slider Cart',
+                        'Product Pages',
+                        'Announcement Bars',
+                        'Wishlist',
+                        'Quick View',
+                        'Sticky Add to Cart',
+                        'Upsells',
+                        'More...'
+                        // 'Free Gift Logic',
+                        // 'Advanced Filtering',
+                        // 'Shoppable Videos',
+                        // 'Custom Product Bundles',
+                        // 'Mega Menu'
+                    ]}
+                    />
+
+                    <FooterItem
+                        title="Services"
+                        texts={[
+                            'Full Stores',
+                            'Product Pages',
+                            'Collection Pages',
+                            'Cart Pages',
+                            'Hire Per Hour'
+                        ]}
+                    />
+                    <FooterItem
+                        title="Company"
+                        texts={[
+                            'Hiring',
+                            'Work',
+                            'Contact',
+                            'Terms Of Service',
+                            'Privacy Policy',
+                            'Docs',
+
+                        ]}
+                    />
+                    <div id="footer-locations-wrap">
+                        <div className="footer-locations-item">
+                            <div className="footer-locations-top">
+                                <Image src="/footer/country-1.svg" width={20} height={20} alt="" />
+                                <h6 className="footer-location-title">United Kingdom</h6>
+                            </div>
+                            <p className="footer-location-text">223 E Summit Ave Stockton, IL 61085 </p>
+                        </div>
+                        <div className="footer-locations-item">
+                            <div className="footer-locations-top">
+                                <Image src="/footer/country-2.svg" width={20} height={20} alt="" />
+                                <h6 className="footer-location-title">Thailand</h6>
+                            </div>
+                            <p className="footer-location-text">Milutina Milankovica 11g 11070 New Belgrade </p>
+                        </div>
+                    </div>
+                </div>
         </div>
         <div id="footer-bottom">
             <p className="footer-bottom-text">© 2025 VYBE. All rights reserved.</p>
