@@ -1,6 +1,9 @@
 import { Manrope, Outfit, Sacramento } from "next/font/google";
 import "../../global/css/main.css";
 import Head from "next/head";
+import TopBar from "@/global/components/TopBar";
+import NavBar from "@/global/components/NavBar";
+import Footer from "@/global/components/Footer";
 
 
 const manRope = Manrope({
@@ -26,7 +29,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${manRope.variable} ${outfit.variable}`}>
+      <TopBar />
+      <NavBar />
         { children }
+        <Footer />
       </body>
     </html>
   );

@@ -1,12 +1,13 @@
 import React from 'react'
 import '@/global/css/components/navbar.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const navItems = [
-  { label: 'Services', hasIcon: true },
-  { label: 'Work' },
-  { label: 'Pricing' },
-  { label: 'Contact' }
+  { label: 'Packages', hasIcon: true, href: "/packages"},
+  { label: 'Work',  href: '/'},
+  { label: 'Results', href: '/' },
+  { label: 'Contact',  href: '/' }
 ]
 
 const NavBar = () => {
@@ -16,12 +17,12 @@ const NavBar = () => {
             <Image id="nav-logo" src="/logo.svg" alt="Logo" width={94.6} height={30} />
             <div id="nav-center">
                 {navItems.map((item, index) => (
-                    <div className="nav-item" key={index}>
-                    <h6 className="nav-text">{item.label}</h6>
-                    {item.hasIcon && (
-                        <Image className="nav-icon" src="/navbar/dropdown-icon.svg" alt="Arrow" width={16} height={16} />
-                    )}
-                </div>
+                    <Link href={item.href} className="nav-item" key={index}>
+                        <h6 className="nav-text">{item.label}</h6>
+                        {item.hasIcon && (
+                            <Image className="nav-icon" src="/navbar/dropdown-icon.svg" alt="Arrow" width={16} height={16} />
+                        )}
+                    </Link>
                 ))}
             </div>
             <div id="nav-right">

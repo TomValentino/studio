@@ -1,0 +1,139 @@
+#footer {
+    max-width: 1200px;
+    margin: 12em auto 12em auto;
+}
+
+#footer-divider {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    background-color: var(--divider-grey);
+}
+
+#footer-bar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em 1em 0;
+    border-radius: 1em;
+    background-color: var(--black);
+}
+
+#footer-bar-text {
+    color: var(--light-grey);
+    font-weight: var(--reg);
+    letter-spacing: var(--space-0);
+    font-size: 1.2em;
+}
+
+#footer-content {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+#footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#footer-logo {
+
+}
+
+#footer-shopify-wrap {
+    background-color: var(--green);
+    padding: 0.2em 2em;
+    border-radius: 0.5em;
+    margin-top: 2em;
+}
+
+#footer-proof {
+    margin-top: 3em;
+
+}
+
+#footer-right {
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-right-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.footer-right-title {
+    font-size: 1.7em;
+    letter-spacing: var(--space-5);
+    font-weight: var(--bold);
+}
+
+.footer-text-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.footer-text {
+    padding: 0.2em 0.2em 0.2em 0em;
+    cursor: pointer;
+    font-size: 1.5em;
+    letter-spacing: var(--space-3);
+}
+
+#footer-bottom {
+    margin-top: 15em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+
+#footer-bottom-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.footer-bottom-text {
+    font-size: 1.2em;
+    font-family: var(--manrope);
+    font-weight: var(--reg);
+}
+
+#footer-bottom-divider {
+    height: 1.6em;
+    width: 1px;
+    background-color: var(--divider-grey);
+}
+
+#footer-bottom-icons-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+

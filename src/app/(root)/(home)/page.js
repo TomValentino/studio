@@ -11,8 +11,6 @@ export default function Home() {
 
   return (
     <>
-      <TopBar />
-      <NavBar />
       <Hero />
       <HowItWorks />
       <CTA />
