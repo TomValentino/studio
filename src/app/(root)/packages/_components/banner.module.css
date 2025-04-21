@@ -1,0 +1,87 @@
+#banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    gap: 2em;
+    width: 100%;
+    max-width: 1220px;
+    margin: 6em auto 0 auto;
+    background-image: url('/packages/shopify-bg.svg');
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-color: var(--dark-bg-3);
+    border-radius: 1.5em;
+    height: 100%;
+    max-height: 40em;
+    padding: 5em;
+}
+
+
+
+/* Left */
+#left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#leftFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#title {
+    text-align: left;
+    font-size: 6em;
+    font-weight: var(--med);
+    letter-spacing: var(--space-1);
+    line-height: 1.2;
+}
+
+#titleBr {
+
+}
+
+
+
+
+/* Right */
+#right {
+    width: 50%;
+    padding-left: 3em;
+}
+
+#subTitle {
+    font-weight: var(--semi);
+    font-size: 3.2em;
+}
+#br {
+    
+}
+#btn {
+    margin-top: 3.5em;
+    height: 5em;
+    padding: 1em 3em;
+    width: 100%;
+}
+
+#btnSubText {
+    font-weight: var(--reg);
+}
+
+#disclaimer {
+    font-size: 1.3em;
+    font-family: var(--manrope);
+    font-weight: var(--reg);
+    margin-top: 1.5em;
+    text-align: center;
+}

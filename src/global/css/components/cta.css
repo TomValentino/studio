@@ -1,8 +1,8 @@
 #cta-wrapper {
     width: 100%;
-    max-width: 1135px;
+    max-width: 1220px;
     margin: auto;
-    margin-top: 5em;
+    margin-top: 10em;
     display: flex;
     flex-direction: column;
     gap: 2em;

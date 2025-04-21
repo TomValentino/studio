@@ -2,9 +2,16 @@
 
 .bullet-wrapper {
     display: flex;
-    flex-direction: column;
+
     gap: 1em;
     margin-top: 3.3em;
+  }
+  .bullet-wrapper.row {
+    flex-direction: row;
+  }
+
+  .bullet-wrapper.col {
+    flex-direction: column;
   }
   
   .bullet-item {

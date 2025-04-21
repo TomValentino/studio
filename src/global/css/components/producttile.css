@@ -4,12 +4,15 @@
     border-radius: 1.5em;
     padding: 1.6em;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 .product-tile:hover .tile-btn {
     background-color: var(--purple);
     border: none;
   }
-  
+.product-tile-wrapper:hover .product-tile {
+    transform: translateY(-10px);
+}
 
 .tile-img-wrapper {
     width: 100%;

@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import styles from '@/global/css/modules/hero.module.css'
+import styles from './hero.module.css'
 import { BenefitPill, BulletList } from '@/global/components/General'
 import ProductTile from '@/global/components/ProductTile'
 

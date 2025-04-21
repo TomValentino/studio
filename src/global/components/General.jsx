@@ -3,9 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 
 
-export const BulletList = ({ bullets = [], wrapperClass = '', itemClass = '', iconClass = '', textClass = '' }) => {
+export const BulletList = ({ bullets = [], wrapperClass = '', fontSize = null, direction = 'col', itemClass = '', iconClass = '', textClass = '' }) => {
     return (
-      <div className={`bullet-wrapper ${wrapperClass}`}>
+      <div className={`bullet-wrapper ${wrapperClass} ${direction}`}>
         {bullets.map((bullet, i) => (
           <div key={i} className={`bullet-item ${itemClass}`}>
             <Image
@@ -15,7 +15,7 @@ export const BulletList = ({ bullets = [], wrapperClass = '', itemClass = '', ic
               width={16}
               height={16}
             />
-            <h6 className={`bullet-text ${textClass}`}>
+            <h6 className={`bullet-text ${textClass}`} style={{fontSize: fontSize}}>
               {bullet.text}
             </h6>        
           </div>
