@@ -47,6 +47,8 @@ const Results = ({ topMargin=null }) => {
                         images={[
                             {
                                 url: '/results/user-1-proof-1.png',
+                            }, 
+                            {
                                 url: '/results/user-1-proof-2.png',
                             }
                         ]}
