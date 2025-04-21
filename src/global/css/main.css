@@ -19,11 +19,14 @@
   --callout-grey: #2B2B2B;
   --callout-grey-50: #2b2b2b80;
   --divider-grey: #2E2E2E;
+  --grey-border: #393C44;
 
   /* Greys */
   --light-grey: #E7E7E7; /* used for ? on upsell.. */
   --light-purple: #BAB2CD;
   --dark-bg: #1B1B1B;
+  --dark-bg-1: #21252F;
+  --dark-bg-2: #282B34;
   --callout-bg: #4F4F4F;
 
   /* Branding */

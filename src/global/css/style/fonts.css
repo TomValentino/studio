@@ -30,6 +30,10 @@ h1,h2,h3,h4,h5,h6 {
   margin-block-end: 0px;
 }
 
+h4,h5,h6 {
+  line-height: var(--line-2)
+}
+
 h1 {
   font-size: 4em;
   letter-spacing: var(--space-5);

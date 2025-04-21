@@ -1,0 +1,152 @@
+#ayn {
+    border-top: 1px solid var(--divider-grey);
+    width: 100%;
+    max-width: 950px;
+    margin: 12em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Top section */
+#ayn-title-wrap {
+    max-width: 42em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8em;
+}
+#ayn-title {
+
+}
+#ayn-text {
+    text-align: center;
+    margin-top: 0.8em;
+    font-size: 1.8em;
+    letter-spacing: var(--space-3);
+    font-weight: var(--reg);
+    color: var(--white-text-80);
+    font-family: var(--outfit);
+    line-height: 1.5;
+}
+#ayn-btn {
+    margin-top: 3.5em;
+    height: 5em;
+    padding: 1em 3em;
+}
+#ayn-btn-text {
+
+}
+#ayn-btn-sub-text {
+    font-weight: var(--reg);
+}
+
+
+
+/* Benefits */
+#ayn-benefits {
+    width: 100%;
+    margin-top: 5em;
+    background-color: var(--black);
+    border-radius: 1.5em;
+    padding: 3em;
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    align-items: center;
+    justify-content: center;
+}
+.ayn-benefit-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+.ayn-benefit-text {
+    font-size: 1.6em;
+}
+
+
+
+/* Slider */
+#ayn-slider {
+    width: 100%;
+    position: relative;
+    background-color: var(--dark-bg-1);
+    border-radius: 1.5em;
+    padding: 0 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: 100%;
+    gap: 2em;
+    max-height: 48em;
+    overflow-y: scroll;
+}
+
+#ayn-slider-grad-top, #ayn-slider-grad-bottom {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    max-height: 20em;
+    background: linear-gradient(to bottom, #21252F  0%, transparent 100%);
+    z-index: 10;
+}
+
+#ayn-slider-grad-bottom {
+    bottom: 0px;
+    top: unset;
+    background: linear-gradient(to bottom, transparent 0%, #21252F 100%);
+
+}
+
+.ayn-slider-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.ayn-slider-item {
+    background-color: var(--dark-bg-2);
+    border: 1px solid var(--grey-border);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: flex-start;
+    padding: 2.3em;
+    border-radius: 1.5em;
+}
+
+.ayn-slider-top {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ayn-slider-title {
+    font-size: 1.6em;
+    font-weight: var(--bold);
+    letter-spacing: var(--space-5);
+}
+
+.ayn-slider-text {
+    font-size: 1.35em;
+    font-family: var(--manrope);
+    font-weight: var(--med);
+    color: var(--grey-text);
+    letter-spacing: var(--space-3)
+}
+
