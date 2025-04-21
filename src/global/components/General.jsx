@@ -26,7 +26,7 @@ export const BulletList = ({ bullets = [], wrapperClass = '', fontSize = null, d
 
   
 
-export const BenefitPill = ({ title, icon }) => {
+export const BenefitPill = ({ title, icon, bold=false }) => {
     const isColor = icon && icon.startsWith('#');
 
     return (
@@ -44,7 +44,7 @@ export const BenefitPill = ({ title, icon }) => {
             ) : (
                 <Image src={icon} alt="Icon" className="benefit-pill-icon" />
             )}
-            <h6 className="benefit-pill-text">{title}</h6>
+            <h6 className={`benefit-pill-text ${bold && 'bold'}`} >{title}</h6>
         </div>
     );
 };

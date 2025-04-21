@@ -45,3 +45,7 @@
     font-weight: 600;
     letter-spacing: var(--space-3);
  }
+
+ .benefit-pill-text.bold {
+  font-weight: var(--bold);
+ }

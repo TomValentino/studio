@@ -1,0 +1,116 @@
+#hero {
+    width: 100%;
+    max-width: 1220px;
+    margin: 6em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+
+
+/* Top Area */
+#heroTop {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+#heroTitle {
+    text-align: center;
+    font-size: 4.5em;
+}
+
+#shopifyLogo {
+    transform: translateY(5px);
+    padding-left: 0.3em;
+}
+
+#topFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    margin-top: 3em;
+}
+
+#topFlexInner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+
+#topBtn {
+    background-color: var(--green);
+    border-radius: 99px;
+    color: var(--black);
+    padding: 1.5em 3em;
+    gap: 1.5em;
+    transition: all 0.3s ease;
+}
+#topBtn:hover {
+    transform: translateY(-5px)
+}
+#topBtnText {
+    font-weight: var(--bold);
+    letter-spacing: var(--space-3);
+    font-size: 1.55em;
+}
+
+#topBtnRound {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 99px;
+    background-color: var(--background);
+    transform: translateX(0.7em);
+}
+
+
+
+/* Benefits */
+#topBenefits {
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 5em;
+}
+.borderLeft {
+    border-left: 1px solid var(--divider-grey)
+}
+.benefitItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2em 4em;
+}
+.benefitTitle {
+    font-size: 1.9em;
+    font-weight: var(--bold);
+}
+.benefitText {
+    font-size: 1.5em;
+}
+
+
+
+/* Pills */
+
+#pillsWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+    font-size: 11px;
+}
