@@ -34,74 +34,110 @@ const AllYouNeed = () => {
                 <h6 className="ayn-benefit-text"><span className="underline">NO</span> Apps Needed</h6>
             </div>
         </div>
-        <div id="ayn-slider" className="no-scrollbar">
+        <div id="ayn-slider" className="no-scrollbar no-select">
             <div id="ayn-slider-grad-top"></div>
             <div id="ayn-slider-grad-bottom"></div>
-            <div className="ayn-slider-col">
-                <SliderItem
-                    image="/all-you-need/slider-1.svg"
-                    title="Automations"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-2.svg"
-                    title="Custom Designs"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-3.svg"
-                    title="Abandonment followup"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-1.svg"
-                    title="Automations"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-2.svg"
-                    title="Custom Designs"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-3.svg"
-                    title="Abandonment followup"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
+            <div className="ayn-slider-col-wrap">
+                <div className="ayn-slider-col" id="ayn-slider-1">
+                    <SliderItem
+                        image="/all-you-need/slider-1.svg"
+                        title="Automations"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-2.svg"
+                        title="Custom Designs"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-3.svg"
+                        title="Abandonment followup"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-1.svg"
+                        title="Automations"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-2.svg"
+                        title="Custom Designs"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-3.svg"
+                        title="Abandonment followup"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                </div>
             </div>
-            <div className="ayn-slider-col">
-                <SliderItem
-                    image="/all-you-need/slider-4.svg"
-                    title="Backend systems"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-5.svg"
-                    title="Facebook CAPI"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-6.svg"
-                    title="Email stuffs"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
+            <div className="ayn-slider-col-wrap">
+                <div className="ayn-slider-col" id="ayn-slider-2">
+                    <SliderItem
+                        image="/all-you-need/slider-4.svg"
+                        title="Backend systems"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-5.svg"
+                        title="Facebook CAPI"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-6.svg"
+                        title="Email stuffs"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-4.svg"
+                        title="Backend systems"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-5.svg"
+                        title="Facebook CAPI"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-6.svg"
+                        title="Email stuffs"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                </div>
             </div>
-            <div className="ayn-slider-col">
-                <SliderItem
-                    image="/all-you-need/slider-1.svg"
-                    title="Facebook CAPI"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-3.svg"
-                    title="Pixel Configuration"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
-                <SliderItem
-                    image="/all-you-need/slider-2.svg"
-                    title="Customer Reviews"
-                    text="Setup backend conversions to sync with our Facebook ads manager."
-                />
+            <div className="ayn-slider-col-wrap">
+                <div className="ayn-slider-col" id="ayn-slider-3">
+                    <SliderItem
+                        image="/all-you-need/slider-1.svg"
+                        title="Facebook CAPI"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-3.svg"
+                        title="Pixel Configuration"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-2.svg"
+                        title="Customer Reviews"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-1.svg"
+                        title="Facebook CAPI"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-3.svg"
+                        title="Pixel Configuration"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                    <SliderItem
+                        image="/all-you-need/slider-2.svg"
+                        title="Customer Reviews"
+                        text="Setup backend conversions to sync with our Facebook ads manager."
+                    />
+                </div>
             </div>
         </div>
     </div>
