@@ -1,7 +1,7 @@
 #results {
     width: 100%;
     max-width: 1200px;
-    margin: 13em auto 0 auto;
+    margin: 12em auto 0 auto;
 }
 
 
@@ -57,10 +57,20 @@
 #results-grid-wrapper {
     width: 100%;
     height: 100%;
-    max-height: 72em;
+    max-height: 68em;
     position: relative;
     overflow: hidden;
     margin-top: 3em;
+}
+#results-grid-gradient {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    max-height: 20em;
+    background: linear-gradient(to bottom, transparent 0%, var(--background) 100%);
+    z-index: 10;
 }
 
 #results-grid {
@@ -151,4 +161,74 @@
 }
 .results-img {
 
+}
+
+
+/* Full Results Item */
+.results-full-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.results-full-img {
+    width: 100%;
+}
+.results-full-bottom {
+    background-color: var(--dark-bg-4);
+    padding: 3em;
+    border-radius: 0 0 1.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2em;
+}
+
+
+
+/* Load More */
+#results-load-more-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 5em;
+}
+#results-load-more-title{
+    color: var(--grey-text);
+    font-size: 1.6em;
+    font-weight: var(--med);
+}
+#results-load-more-line-wrap {
+    height: 0.5em;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 99px;
+    overflow: hidden;
+    background-color: var(--divider-grey);
+}
+#results-load-more-line {
+    height: 100%;
+    background-color: var(--light-purple);
+}
+#results-load-more {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--dark-bg);
+    padding: 1.5em 3em;
+    border-radius: 99px;
+    max-width: 250px;
+    margin: auto;
+    color: var(--white-text-80);
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+#results-load-more-text {
+    color: var(--white-text-80);
+    font-size: 1.6em;
 }

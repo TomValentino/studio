@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <Hero />
       <Results />
-      <AllYouNeed />
+      <AllYouNeed topBorder={false} />
       <CTA />
     </>
   );

@@ -17,7 +17,22 @@ const Results = ({ topMargin=null }) => {
             </div>
         </div>
         <div id="results-grid-wrapper">
+            <div id="results-grid-gradient"></div>
             <div id="results-grid">
+                <div className="results-col">
+                    <FullResultsItem
+                        image="/results/full-proof-1.png"
+                        user={
+                            {
+                                img: '/results/user-1-img.png',
+                                name: 'Holly Sherborne',
+                                company: 'Sunny Clothing',
+                                date: "11 Jul 2024",
+                            }
+                        }
+                        text="Making $2,400 per day on average, great!"
+                    />
+                </div>
                 <div className="results-col">
                     <ResultsItem
                         user={
@@ -112,6 +127,16 @@ const Results = ({ topMargin=null }) => {
                 </div>
             </div>
         </div>
+        <div id="results-load-more-wrap">
+            <h6 id="results-load-more-title">Showing 6 of 18 reviews</h6>
+            <div id="results-load-more-line-wrap">
+                <div id="results-load-more-line" style={{width: '60%'}}></div>
+            </div>
+            <div id="results-load-more">
+                <Image src="/magic-grey.svg" width={18} height={18} alt="" />
+                <h6 id="results-load-more-text">Load more</h6>
+            </div>
+        </div>
     </div>
   )
 }
@@ -137,6 +162,26 @@ const ResultsItem = ({ user = {}, text="", images={}}) => {
                 {images.length > 0 && images.map((image, index) => 
                     <Image key={index} className="results-img" src={image.url} width={113} height={85} alt="" />
                 )}
+            </div>
+        </div>
+    )
+}
+
+const FullResultsItem = ( { image = null, user = {}, text = ""}) => {
+    return (
+        <div className="results-full-item">
+            <Image className="results-full-img" src={image} width={365} height={575} alt="" />
+            <div className="results-full-bottom">
+                <div className="results-item-top">
+                    <div className="results-item-top-flex">
+                        <Image className="results-item-img" src={user.img} width={40} height={40} alt="" />
+                        <div className="results-item-top-flex-inner">
+                            <p className="results-item-title">{user.name}</p>
+                            <p className="results-item-text">{user.company}</p>
+                        </div>
+                    </div>
+                    <p className="results-item-text">{user.date}</p>
+                </div>
             </div>
         </div>
     )

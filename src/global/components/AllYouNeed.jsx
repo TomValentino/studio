@@ -2,9 +2,9 @@ import React from 'react'
 import '@/global/css/components/allyouneed.css'
 import Image from 'next/image'
 
-const AllYouNeed = () => {
+const AllYouNeed = ({topBorder=true}) => {
   return (
-    <div id="ayn">
+    <div id="ayn" style={topBorder ? { borderTop: '1px solid var(--divider-grey)'} : { paddingTop: '2em'  }}>
         <div id="ayn-title-wrap">
             <h1 id="ayn-title">
                 Everything You Need <br id="ayn-title-break" />To  

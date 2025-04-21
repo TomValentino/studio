@@ -1,11 +1,11 @@
 #ayn {
-    border-top: 1px solid var(--divider-grey);
-    border-bottom: 1px solid var(--divider-grey);
+    /* border-top: 1px solid var(--divider-grey); */
+    /* border-bottom: 1px solid var(--divider-grey); */
     padding-top: 8em;
-    padding-bottom: 10em;
+    /* padding-bottom: 6m; */
     width: 100%;
     max-width: 950px;
-    margin: 10em auto 0 auto;
+    margin: 12em auto 0 auto;
     display: flex;
     flex-direction: column;
     gap: 2em;
