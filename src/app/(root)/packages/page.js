@@ -4,7 +4,7 @@ import Image from "next/image";
 import Banner from "./_components/Banner";
 import Collection from "./_components/Collection";
 
-export default function Services() {
+export default function Page() {
   return (
     <>
     <Banner />

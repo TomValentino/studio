@@ -1,10 +1,15 @@
 import Image from "next/image";
+import Hero from "./_components/Hero";
+import HowItWorks from "./_components/HowItWorks";
+import CTA from "@/global/components/CTA";
 
-export default async function Home( { params }) {
+export default async function Page( { params }) {
     const { packageName } = await params;
   return (
-    <div>
-      <h1>Welcome to my pacakge {packageName} ??</h1>
-    </div>
+    <>
+      <Hero />
+      <HowItWorks />
+      <CTA />
+    </>
   );
 }

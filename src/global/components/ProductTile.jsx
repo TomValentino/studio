@@ -1,10 +1,11 @@
 import React from 'react'
 import '../css/components/producttile.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
-const ProductTile = ({ img, icon, title, price, tileMaxWidth }) => {
+const ProductTile = ({ href="/offer/sex", img, icon, title, price, tileMaxWidth }) => {
   return (
-    <div className="product-tile-wrapper">
+    <Link href={href} className="product-tile-wrapper">
         <div className="product-tile" style={tileMaxWidth ? { maxWidth: `${tileMaxWidth}` } : {} } >
             <div className="tile-img-wrapper">
                 <Image className="tile-img" src={img} alt="Product Image" width={296} height={174} />
@@ -22,7 +23,7 @@ const ProductTile = ({ img, icon, title, price, tileMaxWidth }) => {
                 </div>
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 
