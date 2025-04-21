@@ -28,6 +28,7 @@
   --dark-bg-1: #21252F;
   --dark-bg-2: #282B34;
   --dark-bg-3: #1F1F1F;
+  --dark-bg-4: #191919;
   --callout-bg: #4F4F4F;
 
   /* Branding */
@@ -35,6 +36,7 @@
   --purple-hover: #7d53f0;
   --green: #D1FC64;
   --gradient: linear-gradient(45deg, #8C64FC 0%, #FF7BF2 100%);
+  --pink: #D2ABD8;
 }
 
 

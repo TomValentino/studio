@@ -67,6 +67,9 @@ const Hero = () => {
                     bold={true}
                 />
             </div>
+            <div id={styles.vidWrapper}>
+                <Image src="/home/temp-vid.png" id={styles.tempVid} width={1061} height={646} alt="" />
+            </div>
         </div>
     </div>
   )

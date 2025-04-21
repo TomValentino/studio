@@ -80,7 +80,7 @@
     align-items: center;
     justify-content: center;
     gap: 3em;
-    margin-top: 5em;
+    margin: 5em auto 0 auto;
 }
 .borderLeft {
     border-left: 1px solid var(--divider-grey)
@@ -113,4 +113,20 @@
     justify-content: center;
     margin-top: 5em;
     font-size: 11px;
+}
+
+
+
+/* Video */
+
+#vidWrapper {
+    background-color: var(--dark-bg-4);
+    padding: 5em;
+    border-radius: 3em;
+    margin-top: 8em;
+}
+
+#tempVid {
+    border-radius: 1.5em;
+    width: 100%;
 }

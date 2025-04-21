@@ -7,12 +7,14 @@ import HowItWorks from "../offer/[packageName]/_components/HowItWorks";
 import CTA from '@/global/components/CTA';
 import AllYouNeed from '@/global/components/AllYouNeed';
 import Hero from './_components/Hero';
+import Results from '@/global/components/Results';
 
 export default function Home() {
 
   return (
     <>
       <Hero />
+      <Results />
       <AllYouNeed />
       <CTA />
     </>
