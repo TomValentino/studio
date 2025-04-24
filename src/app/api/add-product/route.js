@@ -8,15 +8,9 @@ export async function POST(request) {
     const collection = db.collection("products");
 
     const body = await request.json();
-    const { name } = body;
+ 
 
-    if (!name) {
-      return new Response(JSON.stringify({ message: "Product name is required" }), {
-        status: 400,
-      });
-    }
-
-    const result = await collection.insertOne({ name });
+    const result = await collection.insertOne({ body });
 
     return new Response(
       JSON.stringify({ message: "Product added successfully", productId: result.insertedId }),

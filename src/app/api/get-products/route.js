@@ -1,10 +1,10 @@
-// pages/api/products.js
 import clientPromise from "@/lib/mongodb";
 
-export default async function handler(req, res) {
+export async function GET(req) {
   const client = await clientPromise;
-  const db = client.db("VYBE"); // use your DB name
+  const db = client.db("VYBE");
   const products = await db.collection("products").find({}).toArray();
+  console.log('PRODUCTS', products)
 
-  res.status(200).json(products);
+  return new Response(JSON.stringify(products), { status: 200 });
 }

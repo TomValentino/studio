@@ -44,10 +44,8 @@ const ProductPage = async ({ params }) => {
   if (!product) return <div>Product not found</div>;
 
 
-  // Get products from mongo db
-  // const res = await fetch("/api/get-products");
-  // const data = await res.json();
-
+ 
+  
 
   return (
     <div id={styles.topWrapper}>
