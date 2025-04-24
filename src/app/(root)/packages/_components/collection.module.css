@@ -2,7 +2,7 @@
 
 #collection {
     margin: 8em auto 0 auto;
-    max-width: 1220px;
+    max-width: 110em;
     display: flex;
     flex-direction: row;
     gap: 5em;

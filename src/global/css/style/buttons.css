@@ -41,3 +41,7 @@ button.grey {
     width: 1px;
     background-color: var(--white);
 }
+
+.btn-sub-text {
+    font-weight: var(--reg)
+}

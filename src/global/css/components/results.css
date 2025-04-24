@@ -1,6 +1,6 @@
 #results {
     width: 100%;
-    max-width: 1200px;
+    max-width: 110em;
     margin: 12em auto 0 auto;
 }
 
@@ -128,14 +128,14 @@
 .results-item-title {
     font-family: var(--manrope);
     color: var(--white);
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: var(--med);
     letter-spacing: var(--space-3)
 }
 .results-item-text {
     font-family: var(--manrope);
     color: var(--grey-text);
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: var(--reg);
     letter-spacing: var(--space-3)
 
@@ -143,7 +143,7 @@
 .results-item-writing {
     font-family: var(--manrope);
     line-height: 1.6;
-    font-size: 1.6em;
+    font-size: 1.4em;
     letter-spacing: var(--space-5);
     color: var(--grey-text);
     font-weight: var(--semi);

@@ -2,48 +2,9 @@ import React from 'react'
 import styles from './collection.module.css'
 import Image from 'next/image'
 import ProductTile from '@/global/components/ProductTile'
+import productData from '@/app/(root)/packages/products.json';
 
-const Collection = () => {
-
-
-  const products = [
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Slider Cart',
-      price: 'From $69',
-    },
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Predictive Search',
-      price: 'From $149',
-    },
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Awesome Shit',
-      price: 'From $169',
-    },
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Slider Cart',
-      price: 'From $69',
-    },
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Predictive Search',
-      price: 'From $149',
-    },
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Awesome Shit',
-      price: 'From $169',
-    },
-  ]
+const Collection = ({ products}) => {
 
 
   return (
@@ -59,7 +20,7 @@ const Collection = () => {
                         <div className={styles.leftItemIcon}>
                             <Image src="/packages/menu-icon-1.svg" width={16} height={16} alt="" />
                         </div>
-                        <h6 className={styles.leftItemText}>All (16)</h6>
+                        <h6 className={styles.leftItemText}>All ({productData.length})</h6>
                     </div>
                     <div className={styles.leftItemCallout}>
                         <p className={`${styles.leftItemCalloutText} gradient-text`}>New</p>
@@ -87,7 +48,7 @@ const Collection = () => {
             <div id={styles.rightFilters}>
                 <div id={styles.rightFiltersContent}>
                     <h4 id={styles.rightFilterTitle}>All Packages</h4>
-                    <h6 id={styles.rightFilterText}>16 packages</h6>
+                    <h6 id={styles.rightFilterText}>{productData.length} {productData.length > 1 ? 'packages' : 'package'}</h6>
                 </div>
                 <div id={styles.rightFilterBtn}>
                     <h6 id={styles.rightFilterBtnText}>Sort</h6>
@@ -98,13 +59,9 @@ const Collection = () => {
             <div id={styles.tilesWrap}>
                 {products.map((product, index) => (
                     <ProductTile
+                        product={product}
                         key={index}
-                        img={product.img}
-                        title={product.title}
-                        price={product.price}
-                        icon={product.icon}
                         tileMaxWidth={'100%'}
-
                     />
                 ))}
             </div>

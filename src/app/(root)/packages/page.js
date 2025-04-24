@@ -4,12 +4,18 @@ import Image from "next/image";
 import Banner from "./_components/Banner";
 import Collection from "./_components/Collection";
 import Results from "@/global/components/Results";
+import productData from '@/app/(root)/packages/products.json';
 
-export default function Page() {
+
+export default async function Page() {
+
+    // Access product
+    const products = productData;
+    
   return (
     <>
     <Banner />
-    <Collection />
+    <Collection products={products} />
     <AllYouNeed />
     <Results />
     <CTA />

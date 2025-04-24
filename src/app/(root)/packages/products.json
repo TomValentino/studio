@@ -1,0 +1,219 @@
+[
+  {
+
+    "id": "slider-cart",
+    "name": "Slider Cart",
+    "title": "Boost Sales & AOV’s With A Dynamic Slider Cart",
+    "description": "My epic decsiption about how a ladyboy with long nails will suck my ballsack...",
+    "icon": "/products/xxx/slider-cart-icon.svg",
+    "stripeProductId": "prod_SBkKjK1Lt7MP73",
+    "lowPrice": "$149",
+    "filters": ["sales", "customer", "product", "collection", "cart"],
+    "images": [
+      { "src": "/products/xxx/Screenshot%202025-04-24%20at%2019.51.42.png" }
+    ],
+    "versions": [
+      { 
+        "name": "Basic",
+        "price": 149,
+        "priceRRP": 199,
+        "stripePriceId": "price_1RHN1GH8HwAzOhe8QPnWeOQd",
+        "description": "",
+        "whatsIncluded": [
+          {
+            "icon": "",
+            "title": "Slider cart deployment",
+            "description": "- (any store, any theme)"
+          }
+        ]
+      }
+    ],
+    "versionBenefits": [
+      {
+        "icon": "",
+        "title": "Benefit 1"
+      }
+    ],
+    "upsells": [
+      {
+        "customUI": {
+          "price": 49
+        }
+      }
+    ],
+    "sections": [
+      {
+        "componentId": "benefit-item",
+        "props": {
+          "text": "Come and let me suck your ball sack"
+        }
+      }
+    ]
+  },
+  {
+    "id": "product-page",
+    "name": "Product Page",
+    "title": "Enhance Your Product Pages for Increased Conversions",
+    "description": "Optimize your product pages with high-quality images, detailed descriptions, and powerful call-to-actions to drive conversions and customer engagement.",
+    "icon": "/products/xxx/slider-cart-icon.svg",
+    "stripeProductId": "prod_XYZ1234ABC56",
+    "lowPrice": "$99",
+    "filters": ["product", "page", "conversion", "sales"],
+    "images": [
+      { "src": "/products/xxx/Screenshot%202025-04-24%20at%2019.51.42.png" }
+    ],
+    "versions": [
+      { 
+        "name": "Standard",
+        "price": 99,
+        "priceRRP": 149,
+        "stripePriceId": "price_1RHN1GH8HwAzOhe8QPnWePQR",
+        "description": "Upgrade your product page with advanced features to increase sales.",
+        "whatsIncluded": [
+          {
+            "icon": "",
+            "title": "High-quality product images",
+            "description": "- (up to 10 images per product)"
+          },
+          {
+            "icon": "",
+            "title": "Customizable descriptions",
+            "description": "- (up to 500 words)"
+          }
+        ]
+      }
+    ],
+    "versionBenefits": [
+      {
+        "icon": "",
+        "title": "Benefit 1"
+      }
+    ],
+    "upsells": [
+      {
+        "customUI": {
+          "price": 29
+        }
+      }
+    ],
+    "sections": [
+      {
+        "componentId": "benefit-item",
+        "props": {
+          "text": "Boost your product sales with optimized, engaging pages."
+        }
+      }
+    ]
+  },
+  {
+    "id": "collection-page",
+    "name": "Collection Page",
+    "title": "Transform Your Collection Pages for Easy Browsing",
+    "description": "Make your collection pages visually stunning and user-friendly with customizable layouts and filtering options for better customer experience.",
+    "icon": "/products/xxx/slider-cart-icon.svg",
+    "stripeProductId": "prod_ABC4567DEF89",
+    "lowPrice": "$129",
+    "filters": ["collection", "page", "user", "design"],
+    "images": [
+      { "src": "/products/xxx/Screenshot%202025-04-24%20at%2019.51.42.png" }
+    ],
+    "versions": [
+      { 
+        "name": "Advanced",
+        "price": 129,
+        "priceRRP": 179,
+        "stripePriceId": "price_1RHN1GH8HwAzOhe8QPnWeXYZ",
+        "description": "Enhance your collection pages with premium features to engage your audience.",
+        "whatsIncluded": [
+          {
+            "icon": "",
+            "title": "Custom filters",
+            "description": "- (e.g., price, category, rating)"
+          },
+          {
+            "icon": "",
+            "title": "Advanced sorting options",
+            "description": "- (by price, popularity, new arrivals)"
+          }
+        ]
+      }
+    ],
+    "versionBenefits": [
+      {
+        "icon": "",
+        "title": "Benefit 1"
+      }
+    ],
+    "upsells": [
+      {
+        "customUI": {
+          "price": 39
+        }
+      }
+    ],
+    "sections": [
+      {
+        "componentId": "benefit-item",
+        "props": {
+          "text": "Create a visually appealing collection page that enhances user navigation."
+        }
+      }
+    ]
+  },
+  {
+    "id": "predictive-search",
+    "name": "Predictive Search",
+    "title": "Improve Your Store's Search Functionality with Predictive Search",
+    "description": "Enhance your customer's search experience with predictive search that offers real-time, relevant suggestions as they type.",
+    "icon": "/products/xxx/slider-cart-icon.svg",
+    "stripeProductId": "prod_DEF7890GHI12",
+    "lowPrice": "$79",
+    "filters": ["search", "user", "UX", "functionality"],
+    "images": [
+      { "src": "/products/xxx/Screenshot%202025-04-24%20at%2019.51.42.png" }
+    ],
+    "versions": [
+      { 
+        "name": "Pro",
+        "price": 79,
+        "priceRRP": 129,
+        "stripePriceId": "price_1RHN1GH8HwAzOhe8QPnWeABC",
+        "description": "Offer users faster and more accurate search results to improve engagement and conversion.",
+        "whatsIncluded": [
+          {
+            "icon": "",
+            "title": "Instant search suggestions",
+            "description": "- (real-time results as users type)"
+          },
+          {
+            "icon": "",
+            "title": "Relevant product suggestions",
+            "description": "- (based on search history and popularity)"
+          }
+        ]
+      }
+    ],
+    "versionBenefits": [
+      {
+        "icon": "",
+        "title": "Benefit 1"
+      }
+    ],
+    "upsells": [
+      {
+        "customUI": {
+          "price": 19
+        }
+      }
+    ],
+    "sections": [
+      {
+        "componentId": "benefit-item",
+        "props": {
+          "text": "Enhance search speed and accuracy for a smoother shopping experience."
+        }
+      }
+    ]
+  }
+
+]

@@ -56,7 +56,7 @@
 #ayn-benefits {
     width: 100%;
     margin-top: 5em;
-    border: 1px solid var(--dark-bg);
+    background-color: (--dark-bg-4);
     border-radius: 1.5em;
     padding: 2.2em;
     display: flex;

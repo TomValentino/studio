@@ -15,7 +15,7 @@ const NavBar = () => {
     <div id="nav-bar-wrapper">
         <div id="nav-bar">
             <Link href="/">
-                <Image id="nav-logo" src="/logo.svg" alt="Logo" width={94.6} height={30} />
+                <Image id="nav-logo" src="/logo.svg" alt="Logo" width={95} height={30} />
             </Link>
             <div id="nav-center">
                 {navItems.map((item, index) => (

@@ -4,6 +4,8 @@ import Head from "next/head";
 import TopBar from "@/global/components/TopBar";
 import NavBar from "@/global/components/NavBar";
 import Footer from "@/global/components/Footer";
+import { ImageKitProvider } from "@imagekit/next";
+import { CartProvider } from "@/context/cartContext";
 
 
 const manRope = Manrope({
@@ -28,10 +30,19 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`${manRope.variable} ${outfit.variable}`}>
+      <body className={`${manRope.variable} ${outfit.variable}`} >
       <TopBar />
       <NavBar />
-        { children }
+      <CartProvider >
+        <ImageKitProvider
+          urlEndpoint="https://ik.imagekit.io/vybe"
+          publicKey="public_Dmu0mvcH7usjMTfByf9SK5Gn15c="
+          privateKey="private_KSo0CFMAu758/lIbUKmIaLOeo1I="
+          >
+
+          { children }
+        </ImageKitProvider>
+      </CartProvider>
         <Footer />
       </body>
     </html>

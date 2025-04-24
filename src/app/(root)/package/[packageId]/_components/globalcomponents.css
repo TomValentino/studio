@@ -1,0 +1,8 @@
+.poop {
+    color: pink;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: flex-start;
+    align-items: center;
+}

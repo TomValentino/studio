@@ -1,15 +1,15 @@
 
 #wrapper {
-    background-color: var(--black);
-    border-radius: 2em;
+    background-color: var(--dark-bg-5);
+    /* border-radius: 2em; */
     margin: 12em auto 0 auto;
     padding: 9em 8em;
-    max-width: 1200px;
 }
 
 
 #contentWrapper {
-    margin: 8.7em 0 0 0;
+    max-width: 110em;
+    margin: 8.7em auto 0 auto;
     display: flex;
     flex-direction: row;
     gap: 8em;

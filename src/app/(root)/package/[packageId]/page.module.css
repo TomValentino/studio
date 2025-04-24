@@ -1,0 +1,87 @@
+
+
+#topWrapper {
+    width: 100%;
+    max-width: 110em;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 8em;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 6em;
+}
+
+
+
+/* Left */
+#left {
+    width: 100%;
+}
+
+#topTitle {
+    text-align: left;
+}
+
+.topImages {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.5em;
+}
+
+
+
+/* Right */
+#right {
+    width: 100%;
+    max-width: 36.3em;
+    background-color: var(--callout-grey);
+    border-radius: 1.5em;
+    padding: 2em;
+    position: relative;
+}
+
+#rightIcon {
+    position: absolute;
+    top: 0px;
+    left: 3.5em;
+    transform: translateY(-50%);
+}
+#rightTopFlex {
+
+    margin: 5em 0 0 0;
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+#rightTitle {
+    font-size: 1.8em;
+}
+#rightPriceFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1em;
+}
+#rightPriceRRP {
+    transform: translateY(-0.1em);
+    font-size: 1.4em;
+    color: var(--white-text-60);
+    font-weight: var(--reg);
+}
+#rightPrice {
+    font-size: 1.7em;
+}
+#rightBtn {
+
+    margin: 2em 0 5em 0;
+
+    width: 100%;
+    height: 5.2em;
+}
