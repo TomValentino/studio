@@ -112,7 +112,7 @@ const Hero = () => {
           </div>
           <div id={styles.otherProductsWrap} className="no-scrollbar">
             <div id={styles.otherProductsGrid}>
-              {products.map((product, index) => (
+              {/* {products.map((product, index) => (
                 <ProductTile
                   key={index}
                   img={product.img}
@@ -121,7 +121,7 @@ const Hero = () => {
                   icon={product.icon}
                   tileMaxWidth={'24.3em'}
                 />
-              ))}
+              ))} */}
           </div>
           </div>
         </div>

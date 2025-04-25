@@ -31,7 +31,6 @@ const CollectionPage = ({ params }) => {
       <AllYouNeed />
       <Results />
       <CTA />
-      <Footer />
     </>
   );
 };
