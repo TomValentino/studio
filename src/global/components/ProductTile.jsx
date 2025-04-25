@@ -5,11 +5,10 @@ import Image from 'next/image'; // Import Next.js Image
 import Link from 'next/link'
 
 const ProductTile = ({ tileMaxWidth, product }) => {
-
-    const url = `/offer/${product.id}`
+    
 
     return (
-        <Link href={url} className="product-tile-wrapper">
+        <Link href={`/package/${product.id}`} prefetch={false} className="product-tile-wrapper">
             <div className="product-tile" style={tileMaxWidth ? { maxWidth: `${tileMaxWidth}` } : {}}>
                 <div className="tile-img-wrapper">
                     <IKImage
