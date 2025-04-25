@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import { Image as IKImage } from '@imagekit/next';
 import { BenefitItem } from './_components/GlobalComponents';
 import styles from './page.module.css';
 import AtnBtn from './_components/AtnBtn';
 import CheckoutForm, { StripeWrapper } from './_components/Checkout';
-import { Suspense } from 'react';
 import { handleFetchAllProducts } from '@/lib/client';
 import Footer from '@/global/components/Footer';
 
