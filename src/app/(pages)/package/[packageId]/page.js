@@ -9,8 +9,9 @@ const ProductPageContent = async ( { params }) => {
 
   return (
     <>
-    <FuckYou params={params} />
-    <Footer />
+    fuck foooff
+    {/* <FuckYou params={params} />
+    <Footer /> */}
     </>
   )
 };
