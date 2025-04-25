@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const ProductTile = ({ tileMaxWidth, product }) => {
 
-    const url = `/package/${product.id}`
+    const url = `/offer/${product.id}`
 
     return (
         <Link href={url} className="product-tile-wrapper">
