@@ -6,8 +6,10 @@ import Link from 'next/link'
 
 const ProductTile = ({ tileMaxWidth, product }) => {
 
+    const url = `/package/${product.id}`
+
     return (
-        <Link href={`/package/${product.id}`} className="product-tile-wrapper">
+        <Link href={url} className="product-tile-wrapper">
             <div className="product-tile" style={tileMaxWidth ? { maxWidth: `${tileMaxWidth}` } : {}}>
                 <div className="tile-img-wrapper">
                     <IKImage
