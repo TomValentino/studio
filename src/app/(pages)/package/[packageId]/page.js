@@ -14,13 +14,13 @@ const ProductPageContent = async ( { params }) => {
 
   return (
     <>
-    <FuckYou  />
+    <FuckYou  params={params} />
     </>
   )
 };
 export default ProductPageContent;
 
-const FuckYou = async () => {
+const FuckYou = async ({params}) => {
   const products = await handleFetchAllProducts();
   const { packageId } = await params;
   const product = products.find((p) => p.id === packageId);
