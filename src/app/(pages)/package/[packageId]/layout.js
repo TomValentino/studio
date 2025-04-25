@@ -1,3 +1,4 @@
+import { handleFetchAllProducts } from "@/lib/client";
 
 
 
