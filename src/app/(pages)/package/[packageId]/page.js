@@ -6,6 +6,7 @@ import AtnBtn from './_components/AtnBtn';
 import CheckoutForm, { StripeWrapper } from './_components/Checkout';
 import { Suspense } from 'react';
 import { handleFetchAllProducts } from '@/lib/client';
+import Footer from '@/global/components/Footer';
 
 
 
@@ -15,6 +16,7 @@ const ProductPageContent = async ( { params }) => {
   return (
     <>
     <FuckYou  params={params} />
+    <Footer />
     </>
   )
 };
