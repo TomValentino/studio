@@ -1,10 +1,14 @@
+
 import React from 'react'
 import styles from './collection.module.css'
 import Image from 'next/image'
 import ProductTile from '@/global/components/ProductTile'
+import { handleFetchAllProducts } from '@/lib/client'
 
-const Collection = ({ products }) => {
+const Collection = async () => {
 
+    const products = await handleFetchAllProducts();
+   
 
   return (
     <div id={styles.collection}>
