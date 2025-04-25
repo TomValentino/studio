@@ -23,9 +23,6 @@ const CollectionPage = ({ params }) => {
     getAllProducts(); // Call the async function
   }, []); // Empty dependency array ensures this runs once on mount
 
-  if (products.length === 0) {
-    return <div>Loading</div>
-  }
 
   return (
     <>
