@@ -10,12 +10,12 @@ import { handleFetchAllProducts } from "@/lib/client";
 import Footer from "@/global/components/Footer";
 
 // Main wrapper
-const CollectionPage = ({ params }) => {
+const CollectionPage = () => {
 
 
   return (
     <>
-
+      <Banner />
       <Collection />
       <AllYouNeed />
       <Results />
