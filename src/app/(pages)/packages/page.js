@@ -8,6 +8,7 @@ import Results from "@/global/components/Results";
 import productData from '@/app/(pages)/packages/products.json';
 import { handleFetchAllProducts } from "@/lib/client";
 import { useEffect, useState } from "react";
+import Footer from "@/global/components/Footer";
 
 // Main wrapper
 const CollectionPage = ({ params }) => {
@@ -29,6 +30,7 @@ const CollectionPage = ({ params }) => {
       <AllYouNeed />
       <Results />
       <CTA />
+      <Footer />
     </>
   );
 };
