@@ -20,6 +20,7 @@ const CollectionPage = () => {
       <AllYouNeed />
       <Results />
       <CTA />
+      <Footer />
     </>
   );
 };
