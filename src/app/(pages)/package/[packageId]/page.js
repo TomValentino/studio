@@ -17,7 +17,6 @@ const ProductPage = async ({ params }) => {
     </Suspense>
   );
 };
-export default ProductPage;
 
 
 // Product page 
@@ -68,3 +67,4 @@ const ProductPageContent = async ( { params }) => {
     </div>
   );
 };
+export default ProductPageContent;
