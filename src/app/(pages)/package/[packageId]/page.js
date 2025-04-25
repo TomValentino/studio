@@ -6,17 +6,6 @@ import AtnBtn from './_components/AtnBtn';
 import CheckoutForm, { StripeWrapper } from './_components/Checkout';
 import { Suspense } from 'react';
 import { handleFetchAllProducts } from '@/lib/client';
-import FallBack from './loading';
-
-
-// Main wrapper
-const ProductPage = async ({ params }) => {
-  return (
-    <Suspense fallback={<FallBack />}>
-      <ProductPageContent params={params}/>
-    </Suspense>
-  );
-};
 
 
 // Product page 
