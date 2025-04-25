@@ -1,5 +1,5 @@
 
-import productData from '@/app/(root)/packages/products.json';
+import productData from '@/app/(pages)/packages/products.json';
 
 
 export default async function Page() {

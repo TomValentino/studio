@@ -2,9 +2,8 @@ import React from 'react'
 import styles from './collection.module.css'
 import Image from 'next/image'
 import ProductTile from '@/global/components/ProductTile'
-import productData from '@/app/(root)/packages/products.json';
 
-const Collection = ({ products}) => {
+const Collection = ({ products }) => {
 
 
   return (
@@ -20,7 +19,7 @@ const Collection = ({ products}) => {
                         <div className={styles.leftItemIcon}>
                             <Image src="/packages/menu-icon-1.svg" width={16} height={16} alt="" />
                         </div>
-                        <h6 className={styles.leftItemText}>All ({productData.length})</h6>
+                        <h6 className={styles.leftItemText}>All ({products.length})</h6>
                     </div>
                     <div className={styles.leftItemCallout}>
                         <p className={`${styles.leftItemCalloutText} gradient-text`}>New</p>
@@ -48,7 +47,7 @@ const Collection = ({ products}) => {
             <div id={styles.rightFilters}>
                 <div id={styles.rightFiltersContent}>
                     <h4 id={styles.rightFilterTitle}>All Packages</h4>
-                    <h6 id={styles.rightFilterText}>{productData.length} {productData.length > 1 ? 'packages' : 'package'}</h6>
+                    <h6 id={styles.rightFilterText}>{products.length} {products.length > 1 ? 'packages' : 'package'}</h6>
                 </div>
                 <div id={styles.rightFilterBtn}>
                     <h6 id={styles.rightFilterBtnText}>Sort</h6>
@@ -57,7 +56,7 @@ const Collection = ({ products}) => {
             </div>
 
             <div id={styles.tilesWrap}>
-                {products.map((product, index) => (
+                {products.length >= 0 && products.map((product, index) => (
                     <ProductTile
                         product={product}
                         key={index}

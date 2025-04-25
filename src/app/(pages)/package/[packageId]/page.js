@@ -1,60 +1,50 @@
 import Image from 'next/image';
-import productData from '@/app/(root)/packages/products.json';
 import { Image as IKImage } from '@imagekit/next';
 import { BenefitItem } from './_components/GlobalComponents';
 import styles from './page.module.css';
 import AtnBtn from './_components/AtnBtn';
 import CheckoutForm, { StripeWrapper } from './_components/Checkout';
+import { Suspense } from 'react';
+import { handleFetchAllProducts } from '@/lib/client';
+import FallBack from './loading';
 
 
-
-// Dynamically generate metadata based on the product title
-export async function generateMetadata({ params }) {
-  const { packageId } = await params;
-  const product = productData.find((p) => p.id === packageId);
-  
-  // If the product doesn't exist, return default metadata
-  if (!product) {
-    return {
-      title: 'Product not found',
-      description: 'This product is unavailable.',
-    };
-  }
-
-  return {
-    title: product.name+ " | VYBE Marketing",
-    description: product.description || 'No description available.',
-    openGraph: {
-      title: product.title,
-      description: product.description || 'No description available.',
-      images: product.images.map(img => img.src) || [],
-    },
-  };
-}
-
-const components = {
-  'benefit-item': BenefitItem,
-};
-
+// Main wrapper
 const ProductPage = async ({ params }) => {
+  return (
+    <Suspense fallback={<FallBack />}>
+      <ProductPageContent params={params}/>
+    </Suspense>
+  );
+};
+export default ProductPage;
 
-  // Get the product
+
+// Product page 
+const ProductPageContent = async ( { params }) => {
+
+  const products = await handleFetchAllProducts();
   const { packageId } = await params;
-  const product = productData.find((p) => p.id === packageId);
-  if (!product) return <div>Product not found</div>;
+  const product = products.find((p) => p.id === packageId);
 
-
- 
-  
+  if (!product) return <div>Product not found</div>; 
+  const components = {
+    'benefit-item': BenefitItem,
+  };
 
   return (
     <div id={styles.topWrapper}>
       <div id={styles.left}>
-
         <h1 id={styles.topTitle}>{product.title}</h1>
         <p>{product.description}</p>
 
-        <IKImage className={styles.topImages} src={product.images[0].src} width={1000} height={740} alt={product.title} />
+        <IKImage
+          className={styles.topImages}
+          src={product.images[0].src}
+          width={1000}
+          height={740}
+          alt={product.title}
+        />
 
         {product.sections.map((section, index) => {
           const { componentId, props = {} } = section;
@@ -74,12 +64,7 @@ const ProductPage = async ({ params }) => {
         <IKImage id={styles.rightIcon} src={product.icon} width={57} height={57} alt="" />
         <AtnBtn product={product} />
         <StripeWrapper />
-
-      
-
       </div>
     </div>
   );
 };
-
-export default ProductPage;

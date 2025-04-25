@@ -12,7 +12,7 @@ const ProductTile = ({ tileMaxWidth, product }) => {
                 <div className="tile-img-wrapper">
                     <IKImage
                         className="tile-img"
-                        src={product.images[0]?.src || "/product-tile/tile-1.png"}
+                        src={product?.images?.[0]?.src || "/product-tile/tile-1.png"}
                         alt="Product Image"
                         width={1000}
                         height={747}
@@ -38,7 +38,7 @@ const ProductTile = ({ tileMaxWidth, product }) => {
                     <div className="tile-title-wrap">
                         <h6 className="tile-title">{product.name || "Default Title"}</h6>
 
-                        {product.versions.length >= 2 ? (
+                        {product?.versions && product.versions.length >= 2 ? (
                             <div className="tile-price-wrap">
                                 <span className="tile-price">
                                 From ${Math.min(...product.versions.map(v => v.price))} 
@@ -47,7 +47,7 @@ const ProductTile = ({ tileMaxWidth, product }) => {
                         ) : (
                             <div className="tile-price-wrap">
                                 <span className="tile-price">
-                                    ${product.versions[0].price } (${product.versions[0].priceRRP})
+                                    ${product?.versions?.[0].price } (${product?.versions?.[0].priceRRP})
                                 </span>
                             </div>
                         )}
