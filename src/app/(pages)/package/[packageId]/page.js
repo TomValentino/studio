@@ -11,11 +11,10 @@ export async function generateStaticParams() {
     slug: product.slug,
   }));
 
-  client.close();
-  
   // Return slugs for static generation
   return slugs.map(slug => ({ slug: slug.slug }));
 }
+
 
 export default async function ProductPage({ params }) {
   const { slug } = params;
@@ -24,8 +23,6 @@ export default async function ProductPage({ params }) {
   const client = await clientPromise;
   const db = client.db('VYBE');
   const product = await db.collection('products').findOne({ slug });
-
-  client.close();
 
   if (!product) {
     return <div>Product not found</div>;
