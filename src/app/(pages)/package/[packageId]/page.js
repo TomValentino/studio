@@ -2,6 +2,7 @@
 
 import { fetchProductById } from '@/lib/server';
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 
 export async function generateMetadata({ params }) {
 
@@ -24,7 +25,9 @@ export default async function ProductPage({ params }) {
 
   return (
     <div>
+      <Suspense fallback={<>Loading cunt fuck</>}>
       <h1>{product.title}</h1>
+      </Suspense>
     </div>
   );
 }
