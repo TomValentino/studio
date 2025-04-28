@@ -4,6 +4,7 @@ import styles from './collection.module.css'
 import Image from 'next/image'
 import ProductTile from '@/global/components/ProductTile'
 import { handleFetchAllProducts } from '@/lib/client'
+import clientPromise from '@/lib/mongodb'
 
 export const revalidate = 60; // Page will regenerate every 60 seconds
 
@@ -16,7 +17,7 @@ const Collection = async () => {
   
     const products = await db.collection('products').find().toArray();
 
-    
+
   return (
     <div id={styles.collection}>
         <div id={styles.left}>
