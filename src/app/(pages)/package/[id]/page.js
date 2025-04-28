@@ -1,4 +1,5 @@
 import clientPromise from "@/lib/mongodb";
+import FuckYou from "./_components/FuckYou";
 
 // Fetch slugs for static generation
 export async function generateStaticParams() {
@@ -36,9 +37,7 @@ export default async function ProductPage({ params }) {
 
   return (
     <div>
-      <h1>{product.name}</h1>
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
+      <FuckYou product={product} />
     </div>
   );
 }

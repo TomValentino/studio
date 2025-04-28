@@ -10,6 +10,8 @@ import { handleFetchAllProducts, handleCreateNewProduct } from '@/lib/client';
 
 const AtnBtn = ( { product } ) => {
 
+  const parsedProduct = JSON.parse(product);  // Parses the product JSON string
+
   // Consts etc
   const { cart, addToCart, removeFromCart, updateQuantity, totalAmount } = useCart();
 
@@ -79,11 +81,11 @@ const AtnBtn = ( { product } ) => {
 
       <p>Total: ${totalAmount}</p>
 
-      <button id={styles.rightBtn} onClick={() => addToCart(product)}>
+      <button id={styles.rightBtn} onClick={() => addToCart(parsedProduct)}>
           <Image id={styles.BtnIcon} src="/magic.svg" width={20} height={20} alt="" />
           <h6>Add To Cart</h6>
           <div className="btn-divider"></div>
-          <h6 className="btn-sub-text">${product.versions[0].price}</h6>
+          <h6 className="btn-sub-text">${parsedProduct.versions[0].price}</h6>
       </button>
       <button onClick={() => handleCreateNewProduct(productData)}>Add product</button>
       <button onClick={() => handleFetchAllProducts()}>fetch product</button>

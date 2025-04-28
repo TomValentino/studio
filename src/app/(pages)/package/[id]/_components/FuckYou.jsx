@@ -5,10 +5,8 @@ import { StripeWrapper } from "./Checkout";
 import { BenefitItem } from "./GlobalComponents";
 import styles from '../page.module.css'
 
-const FuckYou = async ({params}) => {
-    const products = await handleFetchAllProducts();
-    const { packageId } = await params;
-    const product = products.find((p) => p.id === packageId);
+const FuckYou = async ({product}) => {
+
   
     if (!product) return <div>Product not found</div>; 
     const components = {
@@ -45,7 +43,7 @@ const FuckYou = async ({params}) => {
             </div>
           </div>
           <IKImage id={styles.rightIcon} src={product.icon} width={57} height={57} alt="" />
-          <AtnBtn product={product} />
+          <AtnBtn product={JSON.stringify(product)} />
           <StripeWrapper />
         </div>
       </div>

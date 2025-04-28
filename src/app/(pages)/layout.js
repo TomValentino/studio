@@ -31,25 +31,27 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+
       <body className={`${manRope.variable} ${outfit.variable}`} >
       <TopBar />
       <NavBar />
 
       <main style={{paddingTop: '13em'}}>
         
-      <CartProvider >
+         <CartProvider >
 
-        <ImageKitProvider
+          < ImageKitProvider
           urlEndpoint="https://ik.imagekit.io/vybe"
           publicKey="public_Dmu0mvcH7usjMTfByf9SK5Gn15c="
           privateKey="private_KSo0CFMAu758/lIbUKmIaLOeo1I="
           >
 
           { children }
-        </ImageKitProvider>
-      </CartProvider>
-            </main>
-      <footer>
+          </ImageKitProvider>
+          </CartProvider>
+        </main>
+        <footer>
           <Footer />
         </footer>
       </body>
