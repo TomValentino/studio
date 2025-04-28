@@ -33,6 +33,8 @@ export default function RootLayout({ children }) {
       <body className={`${manRope.variable} ${outfit.variable}`} >
       <TopBar />
       <NavBar />
+      <main>
+        
       <CartProvider >
 
         <ImageKitProvider
@@ -44,6 +46,7 @@ export default function RootLayout({ children }) {
           { children }
         </ImageKitProvider>
       </CartProvider>
+            </main>
       <footer>
           <Footer />
         </footer>
