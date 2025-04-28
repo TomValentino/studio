@@ -23,7 +23,7 @@
     justify-content: flex-start;
     gap: 3em;
     position: sticky;
-    top: 2em;
+    top: 14em;
 }
 #leftWrapper {
     display: flex;
