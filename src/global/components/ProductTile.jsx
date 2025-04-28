@@ -8,7 +8,7 @@ const ProductTile = ({ tileMaxWidth, product }) => {
     
 
     return (
-        <Link href={`/package/${product.id}`} prefetch={false} className="product-tile-wrapper">
+        <Link href={`/`} prefetch={false} className="product-tile-wrapper">
             <div className="product-tile" style={tileMaxWidth ? { maxWidth: `${tileMaxWidth}` } : {}}>
                 <div className="tile-img-wrapper">
                     <IKImage
