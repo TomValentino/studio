@@ -6,11 +6,10 @@ import ProductTile from '@/global/components/ProductTile'
 import { handleFetchAllProducts } from '@/lib/client'
 import clientPromise from '@/lib/mongodb'
 
-export const revalidate = 60; // Page will regenerate every 60 seconds
 
 // Add the static props bollocks
 
-const Collection = async () => {
+export default async function Collection() {
 
     const client = await clientPromise;
     const db = client.db('VYBE');
@@ -84,4 +83,4 @@ const Collection = async () => {
   )
 }
 
-export default Collection
+export const revalidate = 60; // Page will regenerate every 60 seconds
