@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 
 
 export default async function ProductPage({ params }) {
-  const { id } = params; // no need for "await" here
+  const { id } = await params; // no need for "await" here
   
   console.log('ID', id); // correct log
 
