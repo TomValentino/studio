@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       <TopBar />
       <NavBar />
 
-      <main>
+      <main style={{paddingTop: '13em'}}>
         
       <CartProvider >
 
