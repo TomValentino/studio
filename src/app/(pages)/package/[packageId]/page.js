@@ -5,7 +5,7 @@ import FuckYou from './_components/FuckYou';
 
 
 // Product page 
-const ProductPageContent = async ( { params }) => {
+const ProductPageContent = ( { params }) => {
 
   return (
     <>
