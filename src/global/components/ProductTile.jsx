@@ -1,4 +1,4 @@
-'use client' 
+
 import React from 'react'
 import '../css/components/producttile.css'
 import { Image as IKImage } from '@imagekit/next'; // Rename ImageKit component to avoid conflict
@@ -9,8 +9,7 @@ const ProductTile = ({ tileMaxWidth, product }) => {
     
 
     return (
-        <Link 
-         href={`/package/${product.id}`} className="product-tile-wrapper" >
+        <Link href={`/package/${product.id}`} className="product-tile-wrapper" >
            
             <div className="product-tile" style={tileMaxWidth ? { maxWidth: `${tileMaxWidth}` } : {}}>
                 <div className="tile-img-wrapper">

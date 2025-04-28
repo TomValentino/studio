@@ -1,6 +1,7 @@
 #nav-bar-wrapper {
     height: 9em;
-    position: sticky;
+    /* position: sticky; */
+    position: fixed;
     top: 40px;
     left: 0px;
     right: 0px;

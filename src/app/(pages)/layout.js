@@ -6,7 +6,6 @@ import NavBar from "@/global/components/NavBar";
 import Footer from "@/global/components/Footer";
 import { ImageKitProvider } from "@imagekit/next";
 import { CartProvider } from "@/context/cartContext";
-import Scroll from "@/global/components/Scroll";
 
 
 const manRope = Manrope({
@@ -28,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Scroll />
+
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
