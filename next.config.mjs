@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     domains: ['ik.imagekit.io'], // Allow external images from ImageKit
   },
-  trailingSlash: true, // supposed to go to top of page with link shit
+  trailingSlash: true, // supposed to go to top of page with link shit - dont do shit
   // experimental: {
   //   scrollRestoration: true, // Enables browser scroll restoration for App Router
   // },
