@@ -5,6 +5,9 @@ import Image from 'next/image'
 import ProductTile from '@/global/components/ProductTile'
 import { handleFetchAllProducts } from '@/lib/client'
 
+export const revalidate = 60; // Page will regenerate every 60 seconds
+
+
 const Collection = async () => {
 
     const products = await handleFetchAllProducts();
