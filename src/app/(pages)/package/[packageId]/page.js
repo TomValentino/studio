@@ -20,13 +20,14 @@ export async function generateStaticParams() {
 
 
 export default async function ProductPage({ params }) {
-  const { id } = await params;
+  const { id } = params; // no need for "await" here
+  
+  console.log('ID', id); // correct log
 
-  console.log('SLUB', id)
-
-  // Fetch product data based on the slug
   const client = await clientPromise;
   const db = client.db('VYBE');
+  
+  // Fetch product by ID, not slug
   const product = await db.collection('products').findOne({ id });
 
   if (!product) {
@@ -41,6 +42,7 @@ export default async function ProductPage({ params }) {
     </div>
   );
 }
+
 
 // Revalidation: Regenerate page after 60 seconds
 export const revalidate = 10; // Page will regenerate every 60 seconds
