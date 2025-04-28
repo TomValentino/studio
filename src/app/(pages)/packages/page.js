@@ -26,3 +26,4 @@ const CollectionPage = () => {
 };
 
 export default CollectionPage;
+export const dynamic = 'force-dynamic';
