@@ -6,6 +6,7 @@ import NavBar from "@/global/components/NavBar";
 import Footer from "@/global/components/Footer";
 import { ImageKitProvider } from "@imagekit/next";
 import { CartProvider } from "@/context/cartContext";
+import TopScroller from "@/global/components/TopScroller";
 
 
 const manRope = Manrope({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <TopBar />
       <NavBar />
       <CartProvider >
+
         <ImageKitProvider
           urlEndpoint="https://ik.imagekit.io/vybe"
           publicKey="public_Dmu0mvcH7usjMTfByf9SK5Gn15c="

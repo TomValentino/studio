@@ -1,6 +1,7 @@
 import React from 'react'
 import '@/global/css/components/allyouneed.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const AllYouNeed = ({topBorder=true}) => {
   return (
@@ -13,12 +14,14 @@ const AllYouNeed = ({topBorder=true}) => {
             <h6 id="ayn-text">
                 We’ll start from a blank-canvas & create the exact designs & capabilities that your specific store needs.
             </h6>
+            <Link href="/packages">
             <button id="ayn-btn">
                 <Image src="/magic.svg" width={20} height={20} alt='' />
                 <h6 id="ayn-btn-text">Talk To Sales</h6>
                 <div className="btn-divider"></div>
                 <h6 id="ayn-btn-sub-text">Best Price</h6>
             </button>
+            </Link>
         </div>
         <div id="ayn-benefits">
             <div className="ayn-benefit-item">
