@@ -27,3 +27,4 @@ const CollectionPage = () => {
 
 export default CollectionPage;
 // export const dynamic = 'force-dynamic';
+export const revalidate = 60; // Page will regenerate every 60 seconds

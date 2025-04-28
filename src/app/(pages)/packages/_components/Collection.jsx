@@ -83,4 +83,3 @@ export default async function Collection() {
   )
 }
 
-export const revalidate = 60; // Page will regenerate every 60 seconds
