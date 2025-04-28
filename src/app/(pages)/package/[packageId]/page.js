@@ -7,22 +7,27 @@ export async function generateStaticParams() {
   
   // Get all slugs for products
   const products = await db.collection('products').find().toArray();
-  const slugs = products.map(product => ({
-    slug: product.slug,
+  const ids = products.map(product => ({
+    id: product.id,
   }));
 
+  console.log('products', products)
+  console.log('ids', ids)
+
   // Return slugs for static generation
-  return slugs.map(slug => ({ slug: slug.slug }));
+  return ids.map(id => ({ id: id.id }));
 }
 
 
 export default async function ProductPage({ params }) {
-  const { slug } = params;
+  const { id } = await params;
+
+  console.log('SLUB', id)
 
   // Fetch product data based on the slug
   const client = await clientPromise;
   const db = client.db('VYBE');
-  const product = await db.collection('products').findOne({ slug });
+  const product = await db.collection('products').findOne({ id });
 
   if (!product) {
     return <div>Product not found</div>;
@@ -38,4 +43,4 @@ export default async function ProductPage({ params }) {
 }
 
 // Revalidation: Regenerate page after 60 seconds
-export const revalidate = 60; // Page will regenerate every 60 seconds
+export const revalidate = 10; // Page will regenerate every 60 seconds
