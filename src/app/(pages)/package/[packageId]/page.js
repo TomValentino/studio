@@ -1,18 +1,17 @@
 
 import Footer from '@/global/components/Footer';
 import FuckYou from './_components/FuckYou';
+import Banner from '../../packages/_components/Banner';
 
 
 
 // Product page 
-const ProductPageContent = ( { params }) => {
+const ProductPage = ( ) => {
 
   return (
     <>
-    fuck foooff
-    {/* <FuckYou params={params} />
-    <Footer /> */}
+    <Banner />
     </>
   )
 };
-export default ProductPageContent;
+export default ProductPage;
