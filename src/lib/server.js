@@ -5,6 +5,36 @@ import clientPromise from "@/lib/mongodb";
 
 
 
+// Fetch a single product by ID
+export const fetchProductById = async (productId) => {
+  try {
+    console.log('productId', productId)
+    const client = await clientPromise;
+    const db = client.db("VYBE");
+    
+    // Fetch a single product by its ID
+    const product = await db.collection("products").findOne({ id: productId });
+
+    if (!product) {
+      throw new Error('Product not found');
+    }
+
+    return {
+      success: true,
+      message: "Product fetched successfully",
+      product: product,  // Return the product data
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: error.message || "Failed to fetch product",
+      error: error.message,
+    };
+  }
+};
+
+
+
 // Fetch All products
 export const fetchAllProducts = async () => {
   try {
