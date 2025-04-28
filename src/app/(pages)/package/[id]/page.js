@@ -45,4 +45,4 @@ export default async function ProductPage({ params }) {
 
 
 // Revalidation: Regenerate page after 60 seconds
-export const revalidate = 10; // Page will regenerate every 60 seconds
+export const revalidate = 60; // Page will regenerate every 60 seconds
