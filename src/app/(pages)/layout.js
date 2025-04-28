@@ -6,6 +6,7 @@ import NavBar from "@/global/components/NavBar";
 import Footer from "@/global/components/Footer";
 import { ImageKitProvider } from "@imagekit/next";
 import { CartProvider } from "@/context/cartContext";
+import ScrollToTop from "@/global/components/ScrollToTop";
 
 
 const manRope = Manrope({
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
       <body className={`${manRope.variable} ${outfit.variable}`} >
       <TopBar />
       <NavBar />
+      <ScrollToTop />
       <main>
         
       <CartProvider >
