@@ -5,7 +5,6 @@ import { StripeWrapper } from "./_components/Checkout";
 import { Image as IKImage} from "@imagekit/next";
 import { BenefitItem } from "./_components/GlobalComponents";
 import styles from './page.module.css'
-import ProductContent from "./_components/ProductContent";
 
 // Fetch slugs for static generation
 export async function generateStaticParams() {
@@ -45,9 +44,23 @@ export default async function ProductPage({ params }) {
     return (
       <div id={styles.topWrapper}>
         <div id={styles.left}>
-          <Suspense fallback={<>Loading...</>}>
-          <ProductContent id={id} />
-          </Suspense>
+          <h1 id={styles.topTitle}>{product.title}</h1>
+          <p>{product.description}</p>
+  
+          <IKImage
+            className={styles.topImages}
+            src={product.images[0].src}
+            width={1000}
+            height={740}
+            alt={product.title}
+          />
+  
+          {product.sections.map((section, index) => {
+            const { componentId, props = {} } = section;
+            const Section = components[componentId];
+            if (!Section) return null;
+            return <Section key={index} {...props} />;
+          })}
         </div>
         <div id={styles.right}>
           <div id={styles.rightTopFlex}>
