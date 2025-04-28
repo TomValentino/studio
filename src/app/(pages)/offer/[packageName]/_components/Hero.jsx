@@ -20,26 +20,6 @@ const Hero = () => {
     e.stopPropagation(); // Stop click propagation for help section
   };
 
-  const products = [
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Slider Cart',
-      price: 'From $69',
-    },
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Predictive Search',
-      price: 'From $149',
-    },
-    {
-      img: '/product-tile/tile-1.png',
-      icon: '/product-tile/icon-1.svg',
-      title: 'Awesome Shit',
-      price: 'From $169',
-    },
-  ]
 
   return (
     <div className={`${styles.fontController} poop`}>
