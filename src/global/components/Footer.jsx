@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <div id="footer">
+    <footer id="footer">
         <div id="footer-divider">
             <div id="footer-bar">
             <h6 id="footer-bar-text">© 2025  –  VYBE</h6>
@@ -92,7 +92,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
   )
 }
 

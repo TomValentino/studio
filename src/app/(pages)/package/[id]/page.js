@@ -5,6 +5,7 @@ import { StripeWrapper } from "./_components/Checkout";
 import { Image as IKImage} from "@imagekit/next";
 import { BenefitItem } from "./_components/GlobalComponents";
 import styles from './page.module.css'
+import Footer from "@/global/components/Footer";
 
 // Fetch slugs for static generation
 export async function generateStaticParams() {
@@ -42,6 +43,7 @@ export default async function ProductPage({ params }) {
     };
   
     return (
+      <>
       <div id={styles.topWrapper}>
         <div id={styles.left}>
           <h1 id={styles.topTitle}>{product.title}</h1>
@@ -75,6 +77,8 @@ export default async function ProductPage({ params }) {
           <StripeWrapper />
         </div>
       </div>
+      <Footer />
+      </>
     );
 }
 

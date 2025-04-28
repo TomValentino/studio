@@ -51,9 +51,7 @@ export default function RootLayout({ children }) {
           </ImageKitProvider>
           </CartProvider>
         </main>
-        <footer>
-          <Footer />
-        </footer>
+
       </body>
     </html>
   );
