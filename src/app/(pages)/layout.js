@@ -6,7 +6,6 @@ import NavBar from "@/global/components/NavBar";
 import Footer from "@/global/components/Footer";
 import { ImageKitProvider } from "@imagekit/next";
 import { CartProvider } from "@/context/cartContext";
-import TopScroller from "@/global/components/TopScroller";
 
 
 const manRope = Manrope({
@@ -43,9 +42,11 @@ export default function RootLayout({ children }) {
           >
 
           { children }
-          <Footer />
         </ImageKitProvider>
       </CartProvider>
+      <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
