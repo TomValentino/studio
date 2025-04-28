@@ -8,10 +8,7 @@ export const handleFetchAllProducts = async () => {
 };
 
 
-export const fetchSingleProduct = async (productId) => {
 
-}
-  
 // Create new product
 export const handleCreateNewProduct = async (productData) => {
   const { success, message } = await createNewProduct(productData);
