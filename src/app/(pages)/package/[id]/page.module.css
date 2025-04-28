@@ -39,7 +39,8 @@
     background-color: var(--callout-grey);
     border-radius: 1.5em;
     padding: 2em;
-    position: relative;
+    position: sticky;
+    top: 15.8em;
 }
 
 #rightIcon {
@@ -50,7 +51,7 @@
 }
 #rightTopFlex {
 
-    margin: 5em 0 0 0;
+    margin: 3em 0 0 0;
 
     width: 100%;
     display: flex;
