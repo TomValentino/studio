@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <div id="nav-bar-wrapper">
         <div id="nav-bar">
-            <Link href="/">
+            <Link href="/offer/slider-cart">
                 <Image id="nav-logo" src="/logo.svg" alt="Logo" width={95} height={30} />
             </Link>
             <div id="nav-center">
