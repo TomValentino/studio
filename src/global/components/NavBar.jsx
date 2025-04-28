@@ -10,6 +10,8 @@ const navItems = [
   { label: 'Contact',  href: '/' }
 ]
 
+
+
 const NavBar = () => {
   return (
     <div id="nav-bar-wrapper">
