@@ -9,6 +9,9 @@ import Footer from "@/global/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import BackButton from "./_components/BackBtn";
+import HowItWorks from "../../offer/[packageName]/_components/HowItWorks";
+import Results from "@/global/components/Results";
+import CTA from "@/global/components/CTA";
 
 // Fetch slugs for static generation
 export async function generateStaticParams() {
@@ -30,7 +33,7 @@ export async function generateStaticParams() {
 
 
 export default async function ProductPage({ params }) {
-  const { id } = await params; // no need for "await" here
+  const { id } = params;
   
   console.log('ID', id); // correct log
 
@@ -85,6 +88,9 @@ export default async function ProductPage({ params }) {
           <StripeWrapper />
         </div>
       </div>
+      <HowItWorks />
+      <Results />
+      <CTA />
       <Footer />
       </>
     );
