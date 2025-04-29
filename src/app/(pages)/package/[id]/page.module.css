@@ -14,18 +14,6 @@
 
 
 
-/* Left */
-#left {
-    width: 100%;
-}
-
-#leftBack {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1em;
-}
 
 #topTitle {
     text-align: left;

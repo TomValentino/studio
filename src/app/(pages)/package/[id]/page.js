@@ -9,9 +9,10 @@ import Footer from "@/global/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import BackButton from "./_components/BackBtn";
-import HowItWorks from "../../offer/[packageName]/_components/HowItWorks";
+import HowItWorks from "./_components/HowItWorks";
 import Results from "@/global/components/Results";
 import CTA from "@/global/components/CTA";
+import Hero from "../../offer/[packageName]/_components/Hero";
 
 // Fetch slugs for static generation
 export async function generateStaticParams() {
@@ -44,36 +45,21 @@ export default async function ProductPage({ params }) {
   const product = await db.collection('products').findOne({ id });
 
     if (!product) return <div>Product not found</div>; 
-    const components = {
-      'benefit-item': BenefitItem,
-    };
+
 
   
     return (
       <>
+      <Hero productString={JSON.stringify(product)} />
       <div id={styles.topWrapper}>
         <div id={styles.left}>
-          <div id={styles.leftBack}>
-            <BackButton />
-            <h6 id={styles.leftBackSub}> `{'>'} {product.name} </h6>
-          </div>
-          <h1 id={styles.topTitle}>{product.title}</h1>
-          <p>{product.description}</p>
+
+ 
+
   
-          <IKImage
-            className={styles.topImages}
-            src={product.images[0].src}
-            width={1000}
-            height={740}
-            alt={product.title}
-          />
-  
-          {product.sections.map((section, index) => {
-            const { componentId, props = {} } = section;
-            const Section = components[componentId];
-            if (!Section) return null;
-            return <Section key={index} {...props} />;
-          })}
+   
+
+
         </div>
         <div id={styles.right}>
           <div id={styles.rightTopFlex}>

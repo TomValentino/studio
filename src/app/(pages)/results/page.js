@@ -1,5 +1,5 @@
 import Results from "@/global/components/Results";
-import HowItWorks from "../offer/[packageName]/_components/HowItWorks";
+import HowItWorks from "../package/[id]/_components/HowItWorks";
 import CTA from "@/global/components/CTA";
 
 export default function Page() {

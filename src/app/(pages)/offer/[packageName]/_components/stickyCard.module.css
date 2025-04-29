@@ -1,0 +1,143 @@
+
+/* Right */
+.stickyWrap {
+    width: 100%;
+    max-width: 36.7em;
+    min-width: 25em;
+    margin-top: 6.2em;
+    position: sticky;
+    top: 17em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  
+  .stickyCard {
+    background-color: var(--callout-grey);
+    padding: 6em 3.3em 3.3em 3.3em;
+    border-radius: 1.5em;
+    width: 100%;
+  
+  }
+  
+  .cardIcon {
+    position: absolute;
+    top: -2.2em;
+    left: 3.5em;
+    width: 5.7em;
+    height: 5.7em;
+  }
+  
+  /* Title wrapper (pricing etc) */
+  
+  .cardTitleWrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cardTitle {
+    white-space: nowrap;
+    padding-right: 1em;
+    font-size: 1.85em;
+  }
+  
+  .cardTitleRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.9em;
+  }
+  
+  .rrpPrice {
+    color: var(--grey-text);
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 1.34em;
+  }
+  
+  .price {
+    font-size: 1.76em;
+  }
+  
+  .cardTextWrapper {
+    max-width: 20.8em;
+  }
+  .cardText{
+    margin: 1.5em 0 0 0;
+    font-size: 1.4em;
+  }
+  
+  
+  
+  /* Upsell */
+  
+  .upsellWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    border-radius: 1em;
+    height: 3.8em;
+    background-color: var(--white);
+    position: relative;
+    margin-top: 3em;
+    padding: 1.2em;
+    cursor: pointer;
+  }
+  
+  .upsellText {
+    color: var(--dark-text);
+    font-size: 1.2em;
+  }
+  
+  .upsellPriceText {
+    font-weight: 400;
+  }
+  
+  .upsellHelpWrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.2em;
+    border-radius: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-grey);
+    height: 2em;
+    width: 2em;
+    cursor: pointer;
+  }
+  
+  /* Button */
+  
+
+  
+  .disclaimerText {
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: var(--grey-text);
+    text-align: center;
+  }
+  
+  
+  /* Sticky card bottom */
+  
+  .stickyBtm {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4em 1em;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 9px;
+  }
+  

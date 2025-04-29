@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Hero from "./_components/Hero";
-import HowItWorks from "./_components/HowItWorks";
+import HowItWorks from "../../package/[id]/_components/HowItWorks";
 import CTA from "@/global/components/CTA";
 import Results from "@/global/components/Results";
 

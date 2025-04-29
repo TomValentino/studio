@@ -87,8 +87,8 @@ const AtnBtn = ( { product } ) => {
           <div className="btn-divider"></div>
           <h6 className="btn-sub-text">${parsedProduct.versions[0].price}</h6>
       </button>
-      <button onClick={() => handleCreateNewProduct(productData)}>Add product</button>
-      <button onClick={() => handleFetchAllProducts()}>fetch product</button>
+      {/* <button onClick={() => handleCreateNewProduct(productData)}>Add product</button>
+      <button onClick={() => handleFetchAllProducts()}>fetch product</button> */}
 
     </>
   )
