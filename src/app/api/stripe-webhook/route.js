@@ -22,21 +22,21 @@ export async function POST(req) {
   switch (event.type) {
     case 'payment_intent.succeeded':
       const paymentIntent = event.data.object;
-      // Then define and call a method to handle the successful payment intent.
-      // handlePaymentIntentSucceeded(paymentIntent);
+
       console.log('payment succeess!!!', paymentIntent)
-      break;
-    case 'payment_method.attached':
-      const paymentMethod = event.data.object;
-      // Then define and call a method to handle the successful attachment of a PaymentMethod.
       break;
 
       case "payment_intent.payment_failed":
       const paymentFailed = event.data.object; // contains a stripe.PaymentIntent
       console.log(`Payment failed for ${paymentFailed.id}`);
-      // Handle failed payment (e.g., notify user)
       break;
+      
+      case "customer.created": 
 
+      const customer = event.data.object
+      console.log('new customer', customer)
+
+      break
 
     // ... handle other event types
     default:
