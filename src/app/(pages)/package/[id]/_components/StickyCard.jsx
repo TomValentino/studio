@@ -13,7 +13,6 @@ const StickyCard = ( { product }) => {
 
       // State to manage the checkbox's checked state
   const [isChecked, setIsChecked] = useState(false);
-  const [showStripe, setShowStripe] = useState(false)
 
   // Function to toggle the checkbox
   const handleCheckboxToggle = () => {
@@ -95,12 +94,7 @@ const StickyCard = ( { product }) => {
 
         <AtnBtn product={JSON.stringify(product)} />
 
-        <button onClick={() => setShowStripe(true)}>Show Stripe</button>
 
-        {showStripe && (
-
-        <StripeWrapper />
-        )}
 
       <h6 className={styles.disclaimerText}>* Full satisfaction guarantee included.</h6>
 

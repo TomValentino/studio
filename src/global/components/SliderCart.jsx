@@ -1,13 +1,15 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import '@/global/css/components/slidercart.css'
 import { useCart } from '@/context/cartContext';
+import { StripeWrapper } from '@/app/(pages)/package/[id]/_components/Checkout';
 
 const SliderCart = () => {
   const { showCart, toggleCart, cart, totalAmount, updateQuantity, removeFromCart, addToCart  } = useCart(); 
+  const [showStripe, setShowStripe] = useState(false)
   if (!showCart) return null;
-
+  
   return (
     <div id="slider-cart">
       <div id="slider-cart-bg" onClick={toggleCart}></div>
@@ -24,6 +26,14 @@ const SliderCart = () => {
           </div>
       ))}
       <p>Total: ${totalAmount}</p>
+
+      <button onClick={() => setShowStripe(true)}>Checkout</button>
+
+      {showStripe && (
+
+        <StripeWrapper />
+        )}
+
       </div>
     </div>
   );
