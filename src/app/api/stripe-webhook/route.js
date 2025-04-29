@@ -1,33 +1,57 @@
-import Stripe from 'stripe';
+import { error } from "next/dist/build/output/log";
+import { NextRequest, NextResponse } from "next/server";
+import { STRIPE_WEBHOOK_SECRET } from "@/app/lib/env/server";
+import { getLogger } from "@/app/lib/logger";
+import { stripe } from "@/app/lib/stripe/server";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+export const POST = async (req, res) => {
+    const logger = getLogger();
+    const body = await req.text();
+    const sig = req.headers.get("stripe-signature");
 
-export async function POST(req) {
-  const sig = req.headers.get('stripe-signature');
-  
-  // Collect the raw body of the request
-  const rawBody = await req.text();
+    let event;
 
-  let event;
-  try {
-    event = stripe.webhooks.constructEvent(rawBody, sig, process.env.STRIPE_WEBHOOK_SECRET);
-  } catch (err) {
-    return new Response(`Webhook Error: ${err.message}`, { status: 400 });
-  }
+    logger.info("[Stripe] Processing webhook");
 
-  // Handle the event
-  switch (event.type) {
-    case 'payment_intent.succeeded':
-      const paymentIntent = event.data.object;
-      console.log('PaymentIntent was successful!');
-      break;
-    case 'payment_method.attached':
-      const paymentMethod = event.data.object;
-      console.log('PaymentMethod was attached to a Customer!');
-      break;
-    default:
-      console.log(`Unhandled event type ${event.type}`);
-  }
+    try {
+        event = stripe.webhooks.constructEvent(body, sig, STRIPE_WEBHOOK_SECRET);
 
-  return new Response(JSON.stringify({ received: true }), { status: 200 });
-}
+        logger.info({ type: event.type }, `[Stripe] Listening to Webhook Event!`);
+    } catch (err) {
+        error(err);
+        return new Response(`Webhook Error: ${(err).message}`, {
+            status: 400,
+        });
+    }
+
+    try {
+        // Handle the event
+        switch (event.type) {
+            case "checkout.session.completed":
+                const session = event.data.object;
+
+                // add to database
+                break;
+            case "checkout.session.async_payment_failed":
+                const session2 = event.data.object;
+
+                // don't do anything but return an error to customer
+                console.log({ session2, event });
+
+                break;
+            default:
+                // Unexpected event type
+                logger.warn(event.type, `🤷‍♀️ Unhandled event type`);
+                break;
+        }
+    } catch (err) {
+        logger.error({ err }, `[Stripe] Webhook Error`);
+        return new Response("Webhook handler failed. View logs.", {
+            status: 400,
+        });
+    }
+
+    logger.info(`[Stripe] Successfully ran Webhook!`);
+
+    return NextResponse.json({ success: true });
+};
