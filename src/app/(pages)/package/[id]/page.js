@@ -25,8 +25,6 @@ export async function generateStaticParams() {
     id: product.id,
   }));
 
-  console.log('products', products)
-  console.log('ids', ids)
 
   // Return slugs for static generation
   return ids.map(id => ({ id: id.id }));
@@ -36,7 +34,6 @@ export async function generateStaticParams() {
 export default async function ProductPage({ params }) {
   const { id } = params;
   
-  console.log('ID', id); // correct log
 
   const client = await clientPromise;
   const db = client.db('VYBE');
