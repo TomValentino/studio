@@ -1,27 +1,23 @@
-import { error } from "next/dist/build/output/log";
 import { NextRequest, NextResponse } from "next/server";
-import { STRIPE_WEBHOOK_SECRET } from "@/app/lib/env/server";
-import { getLogger } from "@/app/lib/logger";
-import { stripe } from "@/app/lib/stripe/server";
+import Stripe from 'stripe';
 
-export const POST = async (req, res) => {
-    const logger = getLogger();
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+export const POST = async (req) => {
     const body = await req.text();
     const sig = req.headers.get("stripe-signature");
 
     let event;
 
-    logger.info("[Stripe] Processing webhook");
+    console.log("[Stripe] Processing webhook");
 
     try {
-        event = stripe.webhooks.constructEvent(body, sig, STRIPE_WEBHOOK_SECRET);
+        event = stripe.webhooks.constructEvent(body, sig, process.env.STRIPE_WEBHOOK_SECRET);
 
-        logger.info({ type: event.type }, `[Stripe] Listening to Webhook Event!`);
+        console.log({ type: event.type }, `[Stripe] Listening to Webhook Event!`);
     } catch (err) {
-        error(err);
-        return new Response(`Webhook Error: ${(err).message}`, {
-            status: 400,
-        });
+        console.error(`[Stripe] Webhook Error: ${err.message}`);
+        return new NextResponse(`Webhook Error: ${err.message}`, { status: 400 });
     }
 
     try {
@@ -30,28 +26,25 @@ export const POST = async (req, res) => {
             case "checkout.session.completed":
                 const session = event.data.object;
 
-                // add to database
+                // Add to database
                 break;
             case "checkout.session.async_payment_failed":
                 const session2 = event.data.object;
 
-                // don't do anything but return an error to customer
+                // Log and notify the customer
                 console.log({ session2, event });
-
                 break;
             default:
                 // Unexpected event type
-                logger.warn(event.type, `🤷‍♀️ Unhandled event type`);
+                console.warn(`[Stripe] Unhandled event type: ${event.type}`);
                 break;
         }
     } catch (err) {
-        logger.error({ err }, `[Stripe] Webhook Error`);
-        return new Response("Webhook handler failed. View logs.", {
-            status: 400,
-        });
+        console.error(`[Stripe] Webhook Handler Error: ${err}`);
+        return new NextResponse("Webhook handler failed. View logs.", { status: 400 });
     }
 
-    logger.info(`[Stripe] Successfully ran Webhook!`);
+    console.log("[Stripe] Successfully processed webhook!");
 
-    return NextResponse.json({ success: true });
+    return new NextResponse(JSON.stringify({ success: true }), { status: 200 });
 };
