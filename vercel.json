@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/stripe-webhook",
+        "dest": "/app/api/stripe-webhook/route.js"
+      }
+    ]
+  }
+  
