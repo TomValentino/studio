@@ -6,6 +6,9 @@ import { Image as IKImage} from "@imagekit/next";
 import { BenefitItem } from "./_components/GlobalComponents";
 import styles from './page.module.css'
 import Footer from "@/global/components/Footer";
+import Image from "next/image";
+import Link from "next/link";
+import BackButton from "./_components/BackBtn";
 
 // Fetch slugs for static generation
 export async function generateStaticParams() {
@@ -41,11 +44,16 @@ export default async function ProductPage({ params }) {
     const components = {
       'benefit-item': BenefitItem,
     };
+
   
     return (
       <>
       <div id={styles.topWrapper}>
         <div id={styles.left}>
+          <div id={styles.leftBack}>
+            <BackButton />
+            <h6 id={styles.leftBackSub}> `{'>'} {product.name} </h6>
+          </div>
           <h1 id={styles.topTitle}>{product.title}</h1>
           <p>{product.description}</p>
   
