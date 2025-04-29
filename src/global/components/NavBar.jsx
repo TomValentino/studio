@@ -2,6 +2,7 @@ import React from 'react'
 import '@/global/css/components/navbar.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import OpenCart from './OpenCart'
 
 const navItems = [
   { label: 'Packages', hasIcon: true, href: "/packages"},
@@ -13,6 +14,8 @@ const navItems = [
 
 
 const NavBar = () => {
+
+
   return (
     <div id="nav-bar-wrapper">
         <div id="nav-bar">
@@ -31,13 +34,8 @@ const NavBar = () => {
             </div>
             <div id="nav-right">
                 <h6 id="nav-right-text">Login</h6>
-
-                <Link href="/packages">
-                    <button id="nav-button" href="/packages">
-                        <Image src="/magic.svg" alt="Icon" width={18} height={18} />
-                        <h6>Get started</h6>
-                    </button>
-                </Link>
+                <OpenCart />
+      
                 
             </div>
         </div>

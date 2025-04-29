@@ -5,6 +5,7 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(null); // ← Start with null to avoid mismatch
+  const [showCart, setShowCart] = useState(false); // Track visibility of slider cart
 
   useEffect(() => {
     const stored = localStorage.getItem("cart");
@@ -73,6 +74,10 @@ export const CartProvider = ({ children }) => {
     console.log("Cart cleared");
   };
 
+  const toggleCart = () => {
+    setShowCart((prev) => !prev); // Toggle cart visibility
+  };
+
   const totalAmount = cart
     ? cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
     : 0;
@@ -81,7 +86,16 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, updateQuantity, clearCart, totalAmount }}
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        totalAmount,
+        showCart,
+        toggleCart, // Add this to the context
+      }}
     >
       {children}
     </CartContext.Provider>

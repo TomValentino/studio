@@ -90,8 +90,6 @@ const Hero = ({productString}) => {
           ]}
         />
 
-
-
         <div id={styles.otherProducts}>
           <div id={styles.otherProductsFlex}>
             <h6 id={styles.otherProductsTitle}>You might also like</h6>

@@ -6,6 +6,7 @@ import NavBar from "@/global/components/NavBar";
 import Footer from "@/global/components/Footer";
 import { ImageKitProvider } from "@imagekit/next";
 import { CartProvider } from "@/context/cartContext";
+import SliderCart from "@/global/components/SliderCart";
 
 
 const manRope = Manrope({
@@ -34,12 +35,12 @@ export default function RootLayout({ children }) {
 
 
       <body className={`${manRope.variable} ${outfit.variable}`} >
+         <CartProvider >
       <TopBar />
       <NavBar />
 
       <main >
         
-         <CartProvider >
 
           < ImageKitProvider
           urlEndpoint="https://ik.imagekit.io/vybe"
@@ -48,10 +49,11 @@ export default function RootLayout({ children }) {
           >
 
           { children }
+          <SliderCart />
           </ImageKitProvider>
-          </CartProvider>
         </main>
 
+          </CartProvider>
       </body>
     </html>
   );

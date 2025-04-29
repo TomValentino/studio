@@ -93,11 +93,19 @@ const CheckoutForm = () => {
 export default CheckoutForm;
 
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+// const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 export const StripeWrapper = () => {
+
+let stripePromise;
+const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY)
+  }
+  return stripePromise;
+}
   return (
-    <Elements stripe={stripePromise}>
+    <Elements stripe={getStripe()}>
       <CheckoutForm />
     </Elements>
   );

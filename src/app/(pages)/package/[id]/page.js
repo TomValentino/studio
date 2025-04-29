@@ -12,7 +12,7 @@ import BackButton from "./_components/BackBtn";
 import HowItWorks from "./_components/HowItWorks";
 import Results from "@/global/components/Results";
 import CTA from "@/global/components/CTA";
-import Hero from "../../offer/[packageName]/_components/Hero";
+import Hero from "./_components/Hero";
 
 // Fetch slugs for static generation
 export async function generateStaticParams() {
@@ -51,29 +51,6 @@ export default async function ProductPage({ params }) {
     return (
       <>
       <Hero productString={JSON.stringify(product)} />
-      <div id={styles.topWrapper}>
-        <div id={styles.left}>
-
- 
-
-  
-   
-
-
-        </div>
-        <div id={styles.right}>
-          <div id={styles.rightTopFlex}>
-            <h6 id={styles.rightTitle}>{product.name}</h6>
-            <div id={styles.rightPriceFlex}>
-              <h6 id={styles.rightPriceRRP}>${product.versions[0].priceRRP}</h6>
-              <h6 id={styles.rightPrice}>${product.versions[0].price}</h6>
-            </div>
-          </div>
-          <IKImage id={styles.rightIcon} src={product.icon} width={57} height={57} alt="" />
-          <AtnBtn product={JSON.stringify(product)} />
-          <StripeWrapper />
-        </div>
-      </div>
       <HowItWorks />
       <Results />
       <CTA />
