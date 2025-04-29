@@ -7,6 +7,7 @@ import ProductTile from '@/global/components/ProductTile'
 import BackButton from '@/app/(pages)/package/[id]/_components/BackBtn'
 import StickyCard from './StickyCard'
 import { BenefitItem } from '@/app/(pages)/package/[id]/_components/GlobalComponents'
+import { Image as IKImage} from "@imagekit/next";
 
 const Hero = ({productString}) => {
   const product = JSON.parse(productString)
@@ -28,7 +29,7 @@ const Hero = ({productString}) => {
         <div id={styles.divider}></div>
 
         <div id={styles.topImgWrapper}>
-          <Image    
+          <IKImage    
             src={product.images[0].src}
             alt="Hero" id={styles.topImg} width={1000} height={751} 
           />

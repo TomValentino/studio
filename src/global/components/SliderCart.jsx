@@ -3,11 +3,10 @@
 import React, { useState } from 'react'
 import '@/global/css/components/slidercart.css'
 import { useCart } from '@/context/cartContext';
-import { StripeWrapper } from '@/app/(pages)/package/[id]/_components/Checkout';
+import Checkout from './Checkout';
 
 const SliderCart = () => {
-  const { showCart, toggleCart, cart, totalAmount, updateQuantity, removeFromCart, addToCart  } = useCart(); 
-  const [showStripe, setShowStripe] = useState(false)
+  const { showCheckout, toggleCheckout, showCart, toggleCart, cart, totalAmount, updateQuantity, removeFromCart, addToCart  } = useCart(); 
   if (!showCart) return null;
   
   return (
@@ -27,12 +26,11 @@ const SliderCart = () => {
       ))}
       <p>Total: ${totalAmount}</p>
 
-      <button onClick={() => setShowStripe(true)}>Checkout</button>
+      <button onClick={() => toggleCheckout(true)}>Checkout</button>
 
-      {showStripe && (
-
-        <StripeWrapper />
-        )}
+      {showCheckout && (
+        <Checkout />  
+      )}
 
       </div>
     </div>
