@@ -1,14 +1,13 @@
 // app/api/webhook/route.js
 import Stripe from 'stripe';
-import { buffer } from 'micro';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-export const config = { api: { bodyParser: false } };
 
 export async function POST(req) {
+
+
   const sig = req.headers.get('stripe-signature'); // Using 'get' instead of direct access like in `pages/api`
-  const buf = await buffer(req);
 
   let event;
   try {
@@ -17,14 +16,21 @@ export async function POST(req) {
     return new Response(`Webhook Error: ${err.message}`, { status: 400 });
   }
 
-  // Handle successful payment
-  if (event.type === 'payment_intent.succeeded') {
-    const paymentIntent = event.data.object;
-    const customerEmail = paymentIntent.metadata.customerEmail;
 
-    console.log('PaymentIntent succeeded:', paymentIntent.id);
-    // Perform actions like saving to DB, triggering email, etc.
-  }
+    // Handle the event
+    switch (event.type) {
+        case 'payment_intent.succeeded':
+        const paymentIntent = event.data.object;
+        console.log('PaymentIntent was successful!');
+        break;
+        case 'payment_method.attached':
+        const paymentMethod = event.data.object;
+        console.log('PaymentMethod was attached to a Customer!');
+        break;
+        // ... handle other event types
+        default:
+        console.log(`Unhandled event type ${event.type}`);
+    }
 
   return new Response(JSON.stringify({ received: true }), { status: 200 });
 }
