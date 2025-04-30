@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 
 
 export default async function ProductPage({ params }) {
-  const { id } = params;
+  const { id } =await  params;
   
 
   const client = await clientPromise;

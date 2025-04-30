@@ -26,11 +26,15 @@ const SliderCart = () => {
       ))}
       <p>Total: ${totalAmount}</p>
 
-      <button onClick={() => toggleCheckout(true)}>Checkout</button>
-
-      {showCheckout && (
-        <Checkout />  
+      {cart.length > 0 && (
+        <>
+          <button onClick={() => toggleCheckout(true)}>Checkout</button>
+          {showCheckout && (
+            <Checkout />  
+          )}
+        </>
       )}
+
 
       </div>
     </div>

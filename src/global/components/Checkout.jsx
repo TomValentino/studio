@@ -4,13 +4,13 @@ import { StripeWrapper } from '@/app/(pages)/package/[id]/_components/Checkout'
 import { useCart } from '@/context/cartContext'
 
 const Checkout = () => {
-  const { toggleCheckout } = useCart()
-  const amount = 500
+  const { toggleCheckout, totalAmount } = useCart()
+  // const amount = totalAmount === 0 ? 1 : totalAmount
   return (
     <div id="checkout">
       <div id="checkout-bg" onClick={() => toggleCheckout()}></div>
       <div id="checkout-content">
-        <StripeWrapper amount={amount} />
+        <StripeWrapper amount={totalAmount} />
       </div>
     </div>
   )

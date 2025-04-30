@@ -82,9 +82,15 @@ const CheckoutForm = () => {
     setLoading(false);
   };
 
+  const options = {
+    layout: {
+      type: 'tabs',
+      defaultCollapsed: false,
+    },
+  }
   return (
     <form onSubmit={handleSubmit}>
-      <PaymentElement />
+      <PaymentElement options={options} />
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <button type="submit" disabled={!stripe || loading}>
         {loading ? 'Processing...' : `Pay $${totalAmount}`}
@@ -102,30 +108,20 @@ export const StripeWrapper = ({ amount }) => {
     mode: 'payment',
     amount,
     currency: 'usd',
-    layout: {
-      type: 'tabs',
-      defaultCollapsed: false,
-    },
     appearance: {
-      theme: 'night', // or 'stripe', 'night', 'none'
+      theme: 'stripe',
       variables: {
-        colorPrimary: '#E91E63',
+        colorPrimary: '#0570de',
         colorBackground: '#ffffff',
-        colorText: '#333',
-        fontFamily: 'Inter, sans-serif',
-        spacingUnit: '6px',
-        borderRadius: '8px',
-      },
-      rules: {
-        '.Input': {
-          padding: '12px 16px',
-        },
-        '.Label': {
-          fontSize: '14px',
-          fontWeight: '500',
-        },
+        colorText: '#30313d',
+        colorDanger: '#df1b41',
+        fontFamily: 'Ideal Sans, system-ui, sans-serif',
+        spacingUnit: '2px',
+        borderRadius: '4px',
+        // See all possible variables below
       },
     },
+
     
   };
 
