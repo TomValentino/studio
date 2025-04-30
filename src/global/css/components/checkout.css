@@ -23,7 +23,7 @@
     transform: translate(-50%, -50%);
     border-radius: 1.5em;
     width: 100%;
-    max-width: 40em;
+    max-width: 70em;
     padding: 5em;
     background-color: var(--background)
 }

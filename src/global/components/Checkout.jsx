@@ -5,11 +5,12 @@ import { useCart } from '@/context/cartContext'
 
 const Checkout = () => {
   const { toggleCheckout } = useCart()
+  const amount = 500
   return (
     <div id="checkout">
       <div id="checkout-bg" onClick={() => toggleCheckout()}></div>
       <div id="checkout-content">
-        <StripeWrapper />
+        <StripeWrapper amount={amount} />
       </div>
     </div>
   )

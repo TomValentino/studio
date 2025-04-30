@@ -1,8 +1,9 @@
 'use client';
+
 import React, { useState } from 'react';
-import { useStripe, useElements, CardElement, Elements } from '@stripe/react-stripe-js';
-import { useCart } from '@/context/cartContext';
+import { useStripe, useElements, PaymentElement, Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { useCart } from '@/context/cartContext';
 import { useRouter } from 'next/navigation';
 
 const CheckoutForm = () => {
@@ -16,23 +17,35 @@ const CheckoutForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
+
+    if (!stripe || !elements) {
+      setError('Stripe has not loaded');
+      setLoading(false);
+      return;
+    }
 
     try {
+      // Submit any required info (like Address Element) before proceeding
+      const { error: submitError } = await elements.submit();
+      if (submitError) {
+        setError(submitError.message);
+        setLoading(false);
+        return;
+      }
 
+      // Send data to your API to create a payment intent
       const customer = {
         name: 'New test',
         email: 'test@tom.com',
         address: {
           postal_code: 'EX33 2LF',
         },
-      }
-
+      };
 
       const res = await fetch('/api/create-payment', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           items: cart.map((item) => ({
             price: item.stripePriceId,
@@ -43,29 +56,27 @@ const CheckoutForm = () => {
         }),
       });
 
-      if (!res.ok) {
-        throw new Error('Payment creation failed');
-      }
-
+      if (!res.ok) throw new Error('Failed to create payment intent');
       const { clientSecret } = await res.json();
 
-      const result = await stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-          card: elements.getElement(CardElement),
-          billing_details: customer
+      // Confirm the payment using PaymentElement
+      const result = await stripe.confirmPayment({
+        elements,
+        clientSecret,
+        confirmParams: {
+          return_url: `${window.location.origin}/success`, // OR use router.push on success
         },
+        redirect: 'if_required', // or 'always' depending on your flow
       });
 
       if (result.error) {
         setError(result.error.message);
-      } else {
-        if (result.paymentIntent.status === 'succeeded') {
-          clearCart();
-          router.push(`/success/${result.paymentIntent.id}`);
-        }
+      } else if (result.paymentIntent && result.paymentIntent.status === 'succeeded') {
+        clearCart();
+        router.push(`/success/${result.paymentIntent.id}`);
       }
-    } catch (error) {
-      setError(error.message || 'An error occurred');
+    } catch (err) {
+      setError(err.message || 'An unexpected error occurred');
     }
 
     setLoading(false);
@@ -73,8 +84,8 @@ const CheckoutForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <CardElement options={{ style: { base: { fontSize: '16px', color: 'white' } }, hidePostalCode: true }} />
-      {error && <p>{error}</p>}
+      <PaymentElement />
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <button type="submit" disabled={!stripe || loading}>
         {loading ? 'Processing...' : `Pay $${totalAmount}`}
       </button>
@@ -84,17 +95,42 @@ const CheckoutForm = () => {
 
 export default CheckoutForm;
 
-export const StripeWrapper = () => {
-  let stripePromise;
-  const getStripe = () => {
-    if (!stripePromise) {
-      stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
-    }
-    return stripePromise;
+export const StripeWrapper = ({ amount }) => {
+  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+
+  const options = {
+    mode: 'payment',
+    amount,
+    currency: 'usd',
+    layout: {
+      type: 'tabs',
+      defaultCollapsed: false,
+    },
+    appearance: {
+      theme: 'night', // or 'stripe', 'night', 'none'
+      variables: {
+        colorPrimary: '#E91E63',
+        colorBackground: '#ffffff',
+        colorText: '#333',
+        fontFamily: 'Inter, sans-serif',
+        spacingUnit: '6px',
+        borderRadius: '8px',
+      },
+      rules: {
+        '.Input': {
+          padding: '12px 16px',
+        },
+        '.Label': {
+          fontSize: '14px',
+          fontWeight: '500',
+        },
+      },
+    },
+    
   };
 
   return (
-    <Elements stripe={getStripe()}>
+    <Elements stripe={stripePromise} options={options}>
       <CheckoutForm />
     </Elements>
   );
